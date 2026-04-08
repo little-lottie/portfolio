@@ -1,0 +1,2664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王乐爽 Lottie Wang — Portfolio 2016–2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0e0e0e;
+  --surface: #161616;
+  --card: #1c1c1c;
+  --border: #2a2a2a;
+  --border-light: #333;
+  --text: #e8e2d9;
+  --muted: #888;
+  --faint: #444;
+  --accent: #c8763a;
+  --accent2: #8fb0a0;
+  --gold: #c9a96e;
+  --white: #f5f0ea;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ── TYPOGRAPHY ── */
+.serif { font-family: 'Libre Baskerville', serif; }
+.label {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+.en {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.88em;
+}
+.bi { /* bilingual pair wrapper */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.bi .zh { color: var(--text); }
+.bi .en-line {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.82em;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── LAYOUT ── */
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 44px; }
+
+/* ── HERO ── */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.hero-left {
+  padding: 80px 60px 80px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--border);
+}
+
+.hero-right {
+  padding: 80px 44px 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-tag {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.hero-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(52px, 7vw, 90px);
+  font-weight: 700;
+  line-height: 0.92;
+  color: var(--white);
+}
+
+.hero-name-en {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+  margin-top: 16px;
+  display: block;
+}
+
+.hero-role {
+  margin-top: 36px;
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.hero-role .en-line {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.stats-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 60px;
+}
+
+.stat {
+  background: var(--surface);
+  padding: 26px 28px;
+}
+
+.stat-n {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-d { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+/* Right side of hero */
+.hero-overview {
+  margin-bottom: 50px;
+}
+
+.hero-overview p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.badge {
+  border: 1px solid var(--border-light);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+}
+
+.badge.hot {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.nav-row {
+  display: flex;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 44px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 18px;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+  display: block;
+}
+
+nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ── SECTIONS ── */
+section { padding: 90px 0; border-bottom: 1px solid var(--border); }
+section:last-child { border-bottom: none; }
+
+.sec-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.sec-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--border-light);
+  line-height: 1;
+}
+
+.sec-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1;
+}
+
+.sec-title .en {
+  display: block;
+  font-size: 0.55em;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ── EXPERIENCE ── */
+#experience { background: var(--surface); }
+
+.exp-grid { display: flex; flex-direction: column; gap: 0; }
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 50px;
+  padding: 50px 0;
+  border-bottom: 1px solid var(--border);
+}
+.exp-item:last-child { border-bottom: none; }
+
+.exp-period {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.3;
+  padding-top: 4px;
+}
+
+.exp-type {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.exp-org {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.exp-role-zh { font-size: 14px; color: var(--accent2); font-weight: 500; }
+.exp-role-en { font-size: 13px; color: var(--muted); font-style: italic; font-family: 'Libre Baskerville', serif; margin-bottom: 16px; }
+
+.exp-desc { font-size: 13.5px; color: #aaa; line-height: 1.8; margin-bottom: 18px; }
+.exp-desc .en-p { font-style: italic; font-family: 'Libre Baskerville', serif; color: #888; }
+
+.exp-pts { display: flex; flex-direction: column; gap: 10px; }
+
+.exp-pt {
+  font-size: 13px;
+  color: #999;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.65;
+}
+
+.exp-pt::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 11px;
+  top: 3px;
+}
+
+.exp-pt strong { color: var(--text); font-weight: 500; }
+.exp-pt em { font-style: italic; color: #777; font-family: 'Libre Baskerville', serif; }
+
+/* ── SKILLS ── */
+#skills { background: var(--bg); }
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.skill-card {
+  background: var(--card);
+  padding: 32px 28px;
+  position: relative;
+  transition: background 0.15s;
+}
+
+.skill-card:hover { background: #202020; }
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.skill-card:hover::before { opacity: 1; }
+
+.skill-ico { font-size: 24px; margin-bottom: 14px; }
+
+.skill-name-zh {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.skill-name-en {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.skill-pts { display: flex; flex-direction: column; gap: 8px; }
+
+.skill-pt {
+  font-size: 12.5px;
+  color: var(--muted);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.55;
+}
+
+.skill-pt::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--faint);
+  font-size: 11px;
+}
+
+.skill-pt .en-s {
+  display: block;
+  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 1px;
+}
+
+/* ── PROJECTS ── */
+#projects { background: var(--surface); }
+
+/* Flagship card */
+.flagship {
+  background: var(--card);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--gold);
+  padding: 44px 48px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flagship::after {
+  content: attr(data-year);
+  position: absolute;
+  right: 44px;
+  top: 44px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+}
+
+.flag-kicker {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.flag-title-zh {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.flag-title-en {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.flag-role-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.flag-role-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+}
+
+.flag-desc { font-size: 13.5px; color: #aaa; line-height: 1.8; margin-bottom: 8px; }
+.flag-desc.en-desc { font-style: italic; font-family: 'Libre Baskerville', serif; color: #666; }
+
+.flag-skill-pts {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fsp {
+  font-size: 12.5px;
+  color: var(--muted);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.fsp::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 11px; }
+.fsp .skill-tag {
+  font-size: 10px;
+  background: rgba(200,118,58,0.15);
+  color: var(--accent);
+  padding: 2px 7px;
+  margin-right: 5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.fsp em { font-style: italic; font-family: 'Libre Baskerville', serif; color: #666; }
+
+.flag-metrics {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.fmet .num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+}
+
+.fmet .lbl { font-size: 11px; color: var(--muted); margin-top: 5px; line-height: 1.3; }
+
+/* Standard project card */
+.proj-section-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 36px 0 24px;
+}
+
+.proj-section-head h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.proj-section-head .en { font-size: 14px; }
+
+.proj-section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.event-sub-label {
+  margin: 28px 0 14px;
+  padding: 10px 16px;
+  border-left: 3px solid var(--gold);
+  background: rgba(201,169,110,0.06);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-bottom: 4px;
+}
+
+.proj-card {
+  background: var(--card);
+  padding: 26px 24px;
+  transition: background 0.15s;
+}
+
+.proj-card:hover { background: #202020; }
+
+.pc-cat {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pc-title-zh {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 3px;
+}
+
+.pc-title-en {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--faint);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.pc-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.pcs {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  border: 1px solid var(--border-light);
+  padding: 2px 8px;
+  text-transform: uppercase;
+}
+
+.pcs.highlight {
+  background: rgba(200,118,58,0.1);
+  border-color: rgba(200,118,58,0.3);
+  color: var(--accent);
+}
+
+.pc-desc {
+  font-size: 12.5px;
+  color: #777;
+  line-height: 1.65;
+  margin-bottom: 6px;
+}
+
+.pc-desc.en-d {
+  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+  color: #555;
+}
+
+.pc-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(200,118,58,0.4);
+  padding-bottom: 1px;
+}
+
+/* ── ARTIST INTERVIEWS ── */
+#artists { background: var(--bg); }
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.artist-card {
+  background: var(--card);
+  padding: 26px 22px;
+  text-align: center;
+  transition: background 0.15s;
+}
+
+.artist-card:hover { background: #202020; }
+
+.a-ico { font-size: 28px; margin-bottom: 12px; }
+
+.a-zh {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+
+.a-en {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--faint);
+  margin-bottom: 8px;
+}
+
+.a-role {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.a-ctx { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+.a-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(143,176,160,0.4);
+}
+
+/* ── AWARDS ── */
+#awards { background: var(--surface); }
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.award-card {
+  background: var(--card);
+  padding: 30px 32px;
+  border-top: 2px solid var(--gold);
+}
+
+.aw-year {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.aw-title-zh {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.aw-title-en {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.aw-desc { font-size: 12.5px; color: #777; line-height: 1.6; }
+
+/* ── DATA STRIP ── */
+.data-strip {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.data-strip-title {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+.data-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.data-cell {
+  background: var(--surface);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.data-n {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+
+.data-l { font-size: 11.5px; color: var(--muted); margin-top: 8px; line-height: 1.4; }
+.data-l .en-l { font-style: italic; font-family: 'Libre Baskerville', serif; font-size: 0.88em; color: var(--faint); display: block; margin-top: 2px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--bg);
+  padding: 50px 44px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.ft-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.ft-sub { font-size: 13px; color: var(--muted); margin-bottom: 6px; font-style: italic; font-family: 'Libre Baskerville', serif; }
+.ft-copy { font-size: 11px; color: var(--faint); margin-top: 24px; letter-spacing: 0.1em; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-name { animation: fadeUp 0.7s ease both; }
+.hero-name-en { animation: fadeUp 0.7s 0.15s ease both; }
+.hero-role { animation: fadeUp 0.7s 0.25s ease both; }
+.stats-block { animation: fadeUp 0.7s 0.4s ease both; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { border-right: none; border-bottom: 1px solid var(--border); padding: 50px 24px; }
+  .hero-right { padding: 40px 24px; }
+  .skills-layout, .proj-grid { grid-template-columns: 1fr 1fr; }
+  .artist-grid { grid-template-columns: 1fr 1fr; }
+  .awards-grid { grid-template-columns: 1fr; }
+  .data-row { grid-template-columns: 1fr 1fr; }
+  .exp-item { grid-template-columns: 1fr; gap: 16px; }
+  .flag-skill-pts { grid-template-columns: 1fr; }
+  .wrap { padding: 0 20px; }
+}
+
+@media (max-width: 600px) {
+  .skills-layout, .proj-grid, .artist-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<header>
+<div class="hero">
+  <div class="hero-left">
+    <div>
+      <div class="hero-tag">个人项目作品集 · Professional Portfolio · 2016 – 2025</div>
+      <div class="hero-name">王乐爽</div>
+      <span class="hero-name-en">Lottie Wang</span>
+      <div class="hero-role">
+        演出营销 · 内容策划 · 活动执行<br>
+        <span class="en-line">Performing Arts Marketing · Content Strategy · Campaign Execution</span>
+      </div>
+    </div>
+    <div class="stats-block">
+      <div class="stat">
+        <div class="stat-n">10+年</div>
+        <div class="stat-d">演出营销从业经验<br><em style="font-style:italic">Years in performing arts marketing</em></div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">1M+</div>
+        <div class="stat-d">江苏大剧院全平台粉丝<br><em style="font-style:italic">Followers across JCPA social platforms</em><br><span style="color:#555; font-size:11px;">(WeChat 670K · Weibo 104K · Xiaohongshu 60K · Douyin 75K)</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">2.4B</div>
+        <div class="stat-d">《红楼梦》相关话题全网曝光量<br><em style="font-style:italic">Total impressions across Dream of the Red Mansion campaign topics</em></div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">100+</div>
+        <div class="stat-d">年度演出项目管理<br><em style="font-style:italic">Productions managed per year</em></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-overview">
+      <p>10年以上演出行业营销经验，涵盖全案策划执行、内容创作与运营、媒体资源统筹、活动策划落地、艺术家对接等完整业务链条。</p>
+      <p>10+ years of performing arts marketing experience covering integrated campaign planning & execution, content creation, media coordination, live event management, and artist liaison.</p>
+    </div>
+    <div class="hero-badges">
+      <span class="badge hot">全案策划执行</span>
+      <span class="badge hot">新媒体运营</span>
+      <span class="badge hot">活动策划落地</span>
+      <span class="badge">媒体统筹</span>
+      <span class="badge">艺术家对接</span>
+      <span class="badge">文案创作</span>
+      <span class="badge">物料管理</span>
+      <span class="badge">跨界合作</span>
+      <span class="badge">国际传播</span>
+      <span class="badge">数据分析</span>
+    </div>
+  </div>
+</div>
+</header>
+
+<!-- ══════════ NAV ══════════ -->
+<nav>
+  <div class="nav-row">
+    <a href="#experience">经历 Experience</a>
+    <a href="#skills">技能 Skills</a>
+    <a href="#projects">项目 Projects</a>
+    <a href="#productions">演出 Productions</a>
+    <a href="#artists">采访 Interviews</a>
+    <a href="#awards">荣誉 Awards</a>
+  </div>
+</nav>
+
+<!-- ══════════ EXPERIENCE ══════════ -->
+<section id="experience">
+<div class="wrap">
+  <div class="sec-header">
+    <span class="sec-num">01</span>
+    <div class="sec-title">从业经历 <span class="en">Professional Experience</span></div>
+  </div>
+
+  <div class="exp-grid">
+
+    <!-- JCPA Brand Manager -->
+    <div class="exp-item">
+      <div>
+        <div class="exp-period">2021.09<br>—<br>2025.09</div>
+        <div class="exp-type">Brand Manager</div>
+      </div>
+      <div>
+        <div class="exp-org">江苏大剧院 · Jiangsu Center for the Performing Arts</div>
+        <div class="exp-role-zh">品牌推广中心 · 品牌经理 / 主任助理</div>
+        <div class="exp-role-en">Brand Manager · Brand Promotion Centre · Director's Assistant</div>
+        <div class="exp-desc">
+          晋升品牌经理，统筹全院品牌战略与营销方案，领导20人创意团队，管理中国最大演出中心的全渠道传播体系。<br>
+          <span class="en-p">Promoted to Brand Manager, overseeing all brand strategy and campaign management, leading a 20-person creative team across China's largest performing arts centre.</span>
+        </div>
+        <div class="exp-pts">
+          <div class="exp-pt"><strong>全渠道增粉：</strong>统筹微信、微博、小红书、抖音的数字营销，全平台粉丝增长至100万+（微信670K · 微博104K · 小红书60K · 抖音75K）<br><em>Directed digital campaigns across WeChat, Weibo, Xiaohongshu, Douyin — growing combined following to 1M+ (WeChat 670K · Weibo 104K · Xiaohongshu 60K · Douyin 75K)</em></div>
+          <div class="exp-pt"><strong>话题曝光：</strong>《红楼梦》相关微博话题（#舞剧红楼梦# 阅读1.1亿，超话2.4亿），通过内容策略与跨平台传播实现超2亿曝光<br><em>Generated 200M+ views on Weibo campaign #Dance Theatre A Dream of Red Mansions# via targeted content strategy and cross-platform distribution</em></div>
+          <div class="exp-pt"><strong>全案QA管理：</strong>每年统筹10+重大演出项目的宣传审核与内容把关，协调创意、公关、票务、管理各方，确保按时按质交付<br><em>Led campaign QA and approval for 10+ major productions per year, coordinating across creative, PR, ticketing, and management stakeholders</em></div>
+          <div class="exp-pt"><strong>国际传播：</strong>负责歌剧《拉贝日记》欧洲巡演宣传——德国、奥地利两国三地全套媒体对接、物料制作与品牌管理<br><em>Coordinated international publicity for European tour of opera The Diaries of John Rabe — managing all media, collateral, and brand consistency across Germany and Austria</em></div>
+          <div class="exp-pt"><strong>荣誉：</strong>2021年全国"三八红旗手"荣誉称号；2019、2020、2021、2022、2024年度先进工作者<br><em>National March 8th Red-Banner Pacesetter (2021); Advanced Employee of the Year (2019, 2020, 2021, 2022, 2024)</em></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JCPA Marketing Specialist -->
+    <div class="exp-item">
+      <div>
+        <div class="exp-period">2016.04<br>—<br>2021.09</div>
+        <div class="exp-type">Marketing Specialist</div>
+      </div>
+      <div>
+        <div class="exp-org">江苏大剧院 · Jiangsu Center for the Performing Arts</div>
+        <div class="exp-role-zh">品牌推广中心 · 营销策划专员</div>
+        <div class="exp-role-en">Marketing Specialist · Brand Promotion Centre</div>
+        <div class="exp-desc">
+          从零搭建剧院全平台数字传播体系，统筹线上线下营销活动，负责内容创作与媒体资源开发。<br>
+          <span class="en-p">Built the centre's digital presence from the ground up across all major Chinese social media platforms; managed 100+ online and offline campaigns and events.</span>
+        </div>
+        <div class="exp-pts">
+          <div class="exp-pt"><strong>自媒体从零搭建：</strong>从零搭建并运营14个平台自媒体矩阵（微信/微博/抖音/快手/B站/喜马拉雅等），粉丝总量从2017年近零增长至2021年底35万+<br><em>Built all social platforms from zero; grew combined following from near zero (2017) to 350K+ by end of 2021</em></div>
+          <div class="exp-pt"><strong>内容创作：</strong>撰写并编辑数千篇推文，涵盖演出介绍、艺术评论、活动文案、新闻通稿，维护全渠道品牌声音一致性<br><em>Wrote and edited thousands of pieces across performance information, art reviews, event campaigns, and press releases — maintaining brand voice consistency</em></div>
+          <div class="exp-pt"><strong>人物专栏策划：</strong>创立「采访艺术家」专栏，独立完成100+场艺术家采访，统筹所有相关内容传播与发布<br><em>Launched 'Interviews with Artists' column — conducting 100+ artist interviews and managing all associated content distribution</em></div>
+          <div class="exp-pt"><strong>物料与宣传品：</strong>统筹80+个演出项目的宣传品设计制作，翻译校对国内外演出节目单，管理演出季节目册全流程<br><em>Reported on major conferences and art festivals; translated and proofread programme brochures for domestic and international productions</em></div>
+          <div class="exp-pt"><strong>直播生态：</strong>疫情期间开创「云剧场」直播品牌，拓展50+平台渠道，全年直播总观看量960万+次；与人民日报联合策划大型直播活动<br><em>Pioneered 'Cloud Theatre' live-streaming brand during COVID; expanded to 50+ platforms, generating 9.6M+ annual views</em></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wuzhen Theatre Festival -->
+    <div class="exp-item">
+      <div>
+        <div class="exp-period">2016.08<br>—<br>2016.11</div>
+        <div class="exp-type">Volunteer · International Coord.</div>
+      </div>
+      <div>
+        <div class="exp-org">乌镇戏剧节 · Wuzhen Theatre Festival</div>
+        <div class="exp-role-zh">国际演出组协调员</div>
+        <div class="exp-role-en">International Productions Coordinator (Volunteer)</div>
+        <div class="exp-desc">
+          负责国际演出团队的全程对接与协调，包括多国剧组的沟通、接待与舞台技术协调。<br>
+          <span class="en-p">Managed end-to-end liaison and coordination for international performance groups, including communication, hospitality, and on-site technical coordination.</span>
+        </div>
+        <div class="exp-pts">
+          <div class="exp-pt"><strong>西班牙</strong>《堂吉诃德》｜<strong>罗马尼亚</strong>《暴风雨》｜<strong>立陶宛</strong>《卡里古拉》｜<strong>德国</strong>《人民公敌》<br><em>Spain: Don Quixote · Romania: The Tempest · Lithuania: Caligula · Germany: An Enemy of the People</em></div>
+          <div class="exp-pt">协调西班牙、罗马尼亚、立陶宛、德国等多国剧组的接待安排、排练协调与演出保障<br><em>Coordinated logistics, rehearsal scheduling, and performance support for companies from four countries</em></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suhe Mama -->
+    <div class="exp-item">
+      <div>
+        <div class="exp-period">2016.06<br>—<br>2017.04</div>
+        <div class="exp-type">Co-Founder</div>
+      </div>
+      <div>
+        <div class="exp-org">蘇合媽媽剧场 · Theatre MAMASU</div>
+        <div class="exp-role-zh">联合创始人 · 营销负责人</div>
+        <div class="exp-role-en">Co-Founder & Marketing Lead</div>
+        <div class="exp-desc">
+          联合创立专注引进国际儿童剧的亲子剧场品牌，从品牌定位到巡演落地独立完成全链条运营。<br>
+          <span class="en-p">Co-founded a children's performing arts brand focused on introducing international productions to Chinese audiences — managing the full operations pipeline from brand positioning to touring execution.</span>
+        </div>
+        <div class="exp-pts">
+          <div class="exp-pt"><strong>国际演出筛选：</strong>评估欧美儿童剧作品，制定引进标准，与海外制作方完成合作谈判<br><em>Evaluated international children's productions; established selection criteria; completed partnership negotiations with overseas producers</em></div>
+          <div class="exp-pt"><strong>巡演方案：</strong>统筹全国多城市场地协调、技术方案与人员安排，完成完整巡演管理<br><em>Coordinated venue logistics, technical riders, and staffing for multi-city national tours</em></div>
+          <div class="exp-pt"><strong>营销票务：</strong>建立销售体系，制定定价与渠道策略，管理观众关系与票务运营<br><em>Built ticket sales systems; developed pricing and channel strategy; managed audience relations</em></div>
+          <div class="exp-pt"><strong>宣传资源整合：</strong>整合自媒体、家长社群、学校合作等多渠道推广，建立品牌认知<br><em>Integrated social media, parent community, and school partnership channels to build brand awareness</em></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Auckland 2025-26 -->
+    <div class="exp-item">
+      <div>
+        <div class="exp-period">2025<br>—<br>2026</div>
+        <div class="exp-type">Community · Volunteer</div>
+      </div>
+      <div>
+        <div class="exp-org">奥克兰社区活动 · Auckland Community Events</div>
+        <div class="exp-role-zh">营销负责人 / 舞台协调</div>
+        <div class="exp-role-en">Marketing Lead / Stage Assistant — Auckland Chinese Cultural Events</div>
+        <div class="exp-desc">
+          在奥克兰两大华人文化活动中担任核心角色，与新西兰本地主流媒体、华人社团、华人媒体均建立联系。<br>
+          <span class="en-p">Took on core roles in two of Auckland's major Chinese community events, building connections with mainstream NZ media, Chinese community organisations, and Chinese-language media.</span>
+        </div>
+        <div class="exp-pts">
+          <div class="exp-pt"><strong>2025奥克兰月亮节 · Marketing Lead（May – Oct 2025）</strong><br>
+          负责内容策略制定、媒体沟通联络、赞助商支持，并担任舞台主持人。独立完成所有社交媒体内容创作（发文、编辑、排版、粉丝互动），协调媒体渠道与商业合作伙伴，组织抽奖活动并拓展赞助曝光。<br>
+          <em>Planned content strategies, liaised with media, supported sponsors, and stepped on stage as host. Managed all social media content creation and engaged with followers; coordinated media channels, business partners, giveaways, and sponsorship exposure.</em></div>
+          <div class="exp-pt"><strong>2026奥克兰春节庙会 · Stage Assistant（Feb 2026）</strong><br>
+          协调多支演出团队的出场顺序与时间节奏，管理舞台换场，担任表演间隙串场主持。这份经历强化了活动协调、现场运营与社区服务的工作能力——组织力与同理心在现场执行中同等重要。<br>
+          <em>Coordinated run orders, managed timing, assisted with stage transitions, and hosted between performances. The role required calm communication, quick decisions, and close coordination with performers and organisers — strengthening interest in event coordination, live operations, and community-focused work.</em></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section id="skills">
+<div class="wrap">
+  <div class="sec-header">
+    <span class="sec-num">02</span>
+    <div class="sec-title">核心能力 <span class="en">Core Competencies</span></div>
+  </div>
+
+  <div class="skills-layout">
+
+    <div class="skill-card">
+      <div class="skill-ico">🎯</div>
+      <div class="skill-name-zh">演出及活动整体营销策划与全案执行</div>
+      <div class="skill-name-en">Integrated Campaign Planning & Execution</div>
+      <div class="skill-pts">
+        <div class="skill-pt">从策略制定到落地执行的完整项目管理<span class="en-s">End-to-end production marketing project management</span></div>
+        <div class="skill-pt">制定宣传节奏、提炼差异化亮点与定位<span class="en-s">Publicity timeline planning, USP extraction & positioning</span></div>
+        <div class="skill-pt">协调创意、PR、票务、管理多方执行<span class="en-s">Cross-functional stakeholder alignment: creative, PR, ticketing, management</span></div>
+        <div class="skill-pt">代表项目：《红高粱家族》《春之祭》《红楼梦》《拉贝日记》欧洲巡演</div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">📱</div>
+      <div class="skill-name-zh">社交媒体与传统媒体合作统筹</div>
+      <div class="skill-name-en">Social Media & Media Relations Management</div>
+      <div class="skill-pts">
+        <div class="skill-pt">14+平台自媒体矩阵日常管理与内容排期<span class="en-s">14+ platform social media matrix daily management</span></div>
+        <div class="skill-pt">与央视、新华社、人民日报等中央媒体长期合作<span class="en-s">Long-term partnerships with CCTV, Xinhua, People's Daily</span></div>
+        <div class="skill-pt">外部媒体矩阵150+，年均有效报道860+篇<span class="en-s">150+ media partners; 860+ articles of annual coverage</span></div>
+        <div class="skill-pt">与20+高校公众号、专业艺术媒体常态化合作<span class="en-s">Regular partnerships with 20+ university accounts and arts media</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">✍️</div>
+      <div class="skill-name-zh">文字创作能力</div>
+      <div class="skill-name-en">Writing — Copywriting, Editorial & Press</div>
+      <div class="skill-pts">
+        <div class="skill-pt">演出推文、专题策划、艺术评论深度写作<span class="en-s">Performance features, themed series, arts criticism</span></div>
+        <div class="skill-pt">新闻通稿、快讯报道、发布会稿件撰写<span class="en-s">Press releases, news dispatches, launch event copy</span></div>
+        <div class="skill-pt">年均发文1000+篇，涵盖多种文体与风格<span class="en-s">1000+ pieces published annually across varied formats</span></div>
+        <div class="skill-pt">中英双语翻译、节目册文字整理与编辑校对<span class="en-s">Chinese–English bilingual translation, programme editing</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">🔥</div>
+      <div class="skill-name-zh">爆款话题打造</div>
+      <div class="skill-name-en">Viral Topic Creation & Event Marketing</div>
+      <div class="skill-pts">
+        <div class="skill-pt">策划引发广泛社会关注的话题事件与营销节点<span class="en-s">Crafting social topics and marketing hooks that generate organic amplification</span></div>
+        <div class="skill-pt">#2017祖宾·梅塔音乐会购票排队盛况#<span class="en-s">Zubin Mehta concert — ticket queue frenzy went viral</span></div>
+        <div class="skill-pt">#马林斯基芭蕾四小天鹅参与南京马拉松#<span class="en-s">Mariinsky Ballet swan dancers joining Nanjing Marathon</span></div>
+        <div class="skill-pt">#堂吉诃德城市快闪进商场#<span class="en-s">Don Quixote flash mob in shopping mall</span></div>
+        <div class="skill-pt">#女高音安娜·涅瑞贝科天价门票#<span class="en-s">Soprano Anna Netrebko — premium ticket buzz</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">🎪</div>
+      <div class="skill-name-zh">活动策划与现场执行</div>
+      <div class="skill-name-en">Event Planning & On-site Execution</div>
+      <div class="skill-pts">
+        <div class="skill-pt">发布会、见面会、签约仪式等大型活动统筹<span class="en-s">Press conferences, meet-and-greets, signing ceremonies</span></div>
+        <div class="skill-pt">演后谈、艺术家工作坊、快闪活动策划执行<span class="en-s">Post-show talks, artist workshops, flash mob activations</span></div>
+        <div class="skill-pt">嘉宾协调、现场媒体管理、活动全流程把控<span class="en-s">Guest coordination, on-site media management, full workflow oversight</span></div>
+        <div class="skill-pt">独立负责20+场活动/年，覆盖策划至复盘全阶段<span class="en-s">20+ events per year, end-to-end ownership from planning to debrief</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">📦</div>
+      <div class="skill-name-zh">物料对接与宣传品管理</div>
+      <div class="skill-name-en">Collateral Production & Materials Management</div>
+      <div class="skill-pts">
+        <div class="skill-pt">演出季节目册、重点项目节目单全程统筹<span class="en-s">Season and production programme notes, end-to-end coordination</span></div>
+        <div class="skill-pt">文创产品企划与品牌周边设计协调<span class="en-s">Merchandise concept development and branded merchandise coordination</span></div>
+        <div class="skill-pt">地铁、机场、南京南站魔方屏等户外广告管理<span class="en-s">OOH: metro, airport, Nanjing South Station LED screen</span></div>
+        <div class="skill-pt">年均管理300+项目宣传品，视觉物料审核把关<span class="en-s">300+ production collateral items QA'd and approved annually</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">🤝</div>
+      <div class="skill-name-zh">多方资源统筹协调</div>
+      <div class="skill-name-en">Multi-stakeholder Resource Coordination</div>
+      <div class="skill-pts">
+        <div class="skill-pt">与票务中心、场馆、媒体、合作方高效沟通对接<span class="en-s">Efficient liaison with ticketing centres, venues, media, and partners</span></div>
+        <div class="skill-pt">国际剧团、驻华使馆等机构英语沟通协调<span class="en-s">English-language coordination with international troupes and embassies</span></div>
+        <div class="skill-pt">大运河剧院联盟：统筹28家成员剧院联合传播<span class="en-s">Grand Canal Theatre Alliance: coordinating joint comms across 28 venues</span></div>
+        <div class="skill-pt">跨部门资源整合，协调创意/PR/票务/管理各条口<span class="en-s">Cross-departmental alignment: creative, PR, ticketing, management</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">🎭</div>
+      <div class="skill-name-zh">艺术家对接</div>
+      <div class="skill-name-en">Artist Liaison</div>
+      <div class="skill-pts">
+        <div class="skill-pt">持有<strong style="color:var(--white)">演出经纪人资格证书</strong>——中华人民共和国文化和旅游部颁发<span class="en-s">Holds Performance Agent Qualification Certificate — Ministry of Culture and Tourism, PRC</span></div>
+        <div class="skill-pt">国内外艺术家、剧组、经纪公司全流程对接沟通<span class="en-s">End-to-end liaison with domestic and international artists, troupes, agencies</span></div>
+        <div class="skill-pt">艺术家采访、宣传需求对接与内容协调签发<span class="en-s">Artist interview facilitation, PR brief alignment, content sign-off</span></div>
+        <div class="skill-pt">独立完成100+场艺术家深度采访，覆盖音乐、舞蹈、戏剧、京剧等多门类<span class="en-s">100+ in-depth artist interviews across music, dance, drama, and Peking opera</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">🌏</div>
+      <div class="skill-name-zh">业内资源与项目开发</div>
+      <div class="skill-name-en">Industry Network & Project Development</div>
+      <div class="skill-pts">
+        <div class="skill-pt">与国内外多家演出经纪公司保持密切合作关系<span class="en-s">Close working relationships with performing arts agencies in China and internationally</span></div>
+        <div class="skill-pt">新项目寻源、测评与谈判——涵盖音乐会、儿童剧、歌剧、舞剧、音乐剧、脱口秀、演唱会、动画电影、游戏IP等全门类<span class="en-s">Project sourcing, evaluation and negotiation across concerts, children's theatre, opera, dance drama, musicals, stand-up, concerts, animation films and gaming IPs</span></div>
+        <div class="skill-pt">丰富的业内资源可策划执行各领域、各流程演出项目<span class="en-s">Broad industry network enabling full-cycle planning and execution across all performing arts categories</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">📊</div>
+      <div class="skill-name-zh">数据分析与销售策略优化</div>
+      <div class="skill-name-en">Data Analysis & Sales Strategy Optimisation</div>
+      <div class="skill-pts">
+        <div class="skill-pt">追踪票务销售数据，分析宣传节奏与销售相关性<span class="en-s">Tracking ticketing data, correlating campaign timing with sales performance</span></div>
+        <div class="skill-pt">自媒体阅读量、粉丝增长、互动率多维数据复盘<span class="en-s">Social media analytics: reach, follower growth, engagement rate reporting</span></div>
+        <div class="skill-pt">基于数据制定下一季度内容策略调整方向<span class="en-s">Data-informed iteration of content strategy each season</span></div>
+        <div class="skill-pt">2017年起持续制作年度自媒体数据分析报告<span class="en-s">Annual social media performance reports compiled since 2017</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">🌐</div>
+      <div class="skill-name-zh">线上线下整合营销协助</div>
+      <div class="skill-name-en">Online–Offline Integrated Marketing Support</div>
+      <div class="skill-pts">
+        <div class="skill-pt">直播矩阵建设（50+平台），「云剧场」品牌运营<span class="en-s">Live-streaming matrix (50+ platforms), 'Cloud Theatre' brand</span></div>
+        <div class="skill-pt">线上话题策划与线下活动互相引流<span class="en-s">Online topic campaigns driving offline attendance, and vice versa</span></div>
+        <div class="skill-pt">异业联名（瑞幸/茶颜悦色/SeeSaw）内容协同<span class="en-s">Brand co-op content: Luckin Coffee, Chayanyuese, SeeSaw</span></div>
+        <div class="skill-pt">与B站、腾讯艺术、电台等平台联合内容策划<span class="en-s">Co-produced content with Bilibili, Tencent Arts, radio stations</span></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-ico">🎬</div>
+      <div class="skill-name-zh">宣传内容管理与视频策划</div>
+      <div class="skill-name-en">Content Management — Copy, Design & Video</div>
+      <div class="skill-pts">
+        <div class="skill-pt">统筹文案、设计、视频多类型内容的进度与质量管控<span class="en-s">Overseeing copy, design, and video content pipelines and QA</span></div>
+        <div class="skill-pt">短视频/直播脚本创意方向策划与执行跟进<span class="en-s">Short video and live-stream concept direction and production follow-through</span></div>
+        <div class="skill-pt">配合4K纪录片与歌剧电影制作的宣传联动<span class="en-s">Publicity coordination alongside 4K documentary and opera film productions</span></div>
+        <div class="skill-pt">海报、短视频等视觉内容审核把关与品牌一致性<span class="en-s">Brand consistency review for posters, short-form video, and visual assets</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section id="projects">
+<div class="wrap">
+  <div class="sec-header">
+    <span class="sec-num">03</span>
+    <div class="sec-title">项目案例 <span class="en">Selected Projects</span></div>
+  </div>
+
+  <!-- Flagship 0: 红楼梦 -->
+  <div class="flagship" data-year="2021" style="border-left-color: #c9a96e; margin-bottom:16px;">
+    <div class="flag-kicker">★ 标志性项目 · Flagship Long-running Campaign</div>
+    <div class="flag-title-zh">民族舞剧《红楼梦》— 多年全案宣传统筹</div>
+    <div class="flag-title-en">Dance Drama: Dream of the Red Chamber — Multi-year Full Campaign Director</div>
+    <div class="flag-role-row">
+      <span class="flag-role-tag" style="color:var(--gold); border-color:var(--gold);">全案策划执行</span>
+      <span class="flag-role-tag" style="color:var(--gold); border-color:var(--gold);">海外巡演宣传</span>
+      <span class="flag-role-tag" style="color:var(--gold); border-color:var(--gold);">文创&联名</span>
+      <span class="flag-role-tag" style="color:var(--gold); border-color:var(--gold);">2021 – 2025</span>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:4px;">
+      <div>
+        <div class="flag-desc"><strong style="color:var(--white)">传播数据 · Reach</strong></div>
+        <div class="flag-desc">#舞剧红楼梦# 微博超话阅读量 <strong style="color:var(--gold)">2.4亿</strong>，相关词条话题 <strong style="color:var(--gold)">1.1亿</strong></div>
+        <div class="flag-desc en-desc">Weibo super-topic: 240M reads · Related campaign hashtags: 110M views</div>
+
+        <div class="flag-desc" style="margin-top:14px;"><strong style="color:var(--white)">巡演宣传统筹 · Tour Publicity</strong></div>
+        <div class="flag-desc">新加坡、香港、澳门、台湾等港澳台及海外巡演宣传统筹；各城市媒体对接与物料管理</div>
+        <div class="flag-desc en-desc">Coordinated publicity for Singapore, Hong Kong, Macao and Taiwan tours — local media liaison and collateral management per city</div>
+
+        <div class="flag-desc" style="margin-top:14px;"><strong style="color:var(--white)">品牌联名 & 文创 · Collabs & Merch</strong></div>
+        <div class="flag-desc">联名：瑞幸咖啡 × 茶颜悦色<br>文创开发：黑胶唱片、精装画册<br>古风市集策划执行</div>
+        <div class="flag-desc en-desc">Co-branding: Luckin Coffee & Chayanyuese · Merchandise: vinyl records, hardcover art books · Traditional-style market event</div>
+      </div>
+      <div>
+        <div class="flag-desc"><strong style="color:var(--white)">内容专题策划 · Editorial Series</strong></div>
+        <div class="flag-desc">「云肩文化」「十二金钗与花卉」「南京话妙用」「奥运会特辑」「造梦者主创篇」等系列文化专题</div>
+        <div class="flag-desc en-desc">Cloud Collar Tradition, Twelve Beauties & Flowers, Nanjing Dialect, Olympics special, Behind-the-scenes Creator profiles</div>
+
+        <div class="flag-desc" style="margin-top:14px;"><strong style="color:var(--white)">媒体合作 & 活动 · Media & Events</strong></div>
+        <div class="flag-desc">线上线下见面会、主创分享会策划执行<br>B站春晚联合策划<br>纪录片拍摄协调与宣传联动</div>
+        <div class="flag-desc en-desc">Online & offline meet-and-greets, creator sharing sessions · Bilibili Spring Gala · Documentary filming coordination</div>
+
+        <div class="flag-desc" style="margin-top:14px;"><strong style="color:var(--white)">奖项报道 · Awards Coverage</strong></div>
+        <div class="flag-desc">荷花奖、文华奖获奖节点宣传策划与落地</div>
+        <div class="flag-desc en-desc">Strategic publicity for Lotus Award and Wenhua Award nominations and wins</div>
+      </div>
+    </div>
+    <div class="flag-metrics">
+      <div class="fmet"><span class="num">2.4亿</span><div class="lbl">超话阅读量<br><em style="font-style:italic;font-size:0.9em;color:#555">Super-topic reads</em></div></div>
+      <div class="fmet"><span class="num">1.1亿</span><div class="lbl">相关话题阅读<br><em style="font-style:italic;font-size:0.9em;color:#555">Hashtag views</em></div></div>
+      <div class="fmet"><span class="num">港澳台+新</span><div class="lbl">海外巡演城市<br><em style="font-style:italic;font-size:0.9em;color:#555">HK · Macau · Taiwan · Singapore</em></div></div>
+      <div class="fmet"><span class="num">荷花+文华</span><div class="lbl">国家级奖项报道<br><em style="font-style:italic;font-size:0.9em;color:#555">National award coverage</em></div></div>
+    </div>
+  </div>
+
+  <!-- Flagship 1: 红高粱 -->
+  <div class="flagship" data-year="2023">
+    <div class="flag-kicker">★ 标志性项目 · Flagship Project</div>
+    <div class="flag-title-zh">话剧《红高粱家族》全案宣传统筹</div>
+    <div class="flag-title-en">Red Sorghum Clan — Overall Publicity Director</div>
+    <div class="flag-role-row">
+      <span class="flag-role-tag">全案策划执行</span>
+      <span class="flag-role-tag">跨界联名</span>
+      <span class="flag-role-tag">媒体统筹</span>
+      <span class="flag-role-tag">2023 – 2024</span>
+    </div>
+    <div class="flag-desc">作为莫言同名原著改编话剧的宣传执行总负责人，全程主导宣传策略制定与落地执行：直接与文学巨匠莫言多次深度沟通，研讨宣传方向与舞台呈现；协调央视综艺频道国家级媒体报道；策划并执行与 SeeSaw 咖啡的跨界联名。</div>
+    <div class="flag-desc en-desc">Overall publicity director for this stage adaptation of Mo Yan's Nobel Prize-winning novel. Personally collaborated with author Mo Yan on campaign direction; coordinated CCTV broadcast coverage; planned and executed cross-brand collaboration with SeeSaw Coffee.</div>
+    <div class="flag-skill-pts">
+      <div class="fsp"><span class="skill-tag">全案策划</span> 从概念阶段参与策略，设计完整宣传节奏与亮点体系 <em>/ Campaign strategy from pre-production through closing night</em></div>
+      <div class="fsp"><span class="skill-tag">媒体统筹</span> 协调央视、新华社等国家级媒体联合报道 <em>/ Coordinating CCTV, Xinhua, national media coverage</em></div>
+      <div class="fsp"><span class="skill-tag">跨界联名</span> 策划《红高粱家族》× SeeSaw红高粱咖啡品牌联动 <em>/ Red Sorghum × SeeSaw Coffee cross-brand activation</em></div>
+      <div class="fsp"><span class="skill-tag">内容创作</span> 撰写深度策划稿件、主创见面会新闻稿 <em>/ In-depth editorial, press notes, meet-and-greet coverage</em></div>
+      <div class="fsp"><span class="skill-tag">活动执行</span> 高端发布会、媒体见面会的全程策划执行 <em>/ Launch events and press meet-and-greets, end-to-end</em></div>
+      <div class="fsp"><span class="skill-tag">巡演推广</span> 全国21城34场巡演期间持续内容输出与话题维持 <em>/ Ongoing content for 34-show national tour across 21 cities</em></div>
+    </div>
+    <div class="flag-metrics">
+      <div class="fmet"><span class="num">34场</span><div class="lbl">全国巡演<br><em style="font-style:italic; font-size:0.9em; color:#555">National tour shows</em></div></div>
+      <div class="fmet"><span class="num">21城</span><div class="lbl">覆盖城市<br><em style="font-style:italic; font-size:0.9em; color:#555">Cities reached</em></div></div>
+      <div class="fmet"><span class="num">6万+</span><div class="lbl">观众总人次<br><em style="font-style:italic; font-size:0.9em; color:#555">Total audience</em></div></div>
+      <div class="fmet"><span class="num">央视</span><div class="lbl">综艺频道播出<br><em style="font-style:italic; font-size:0.9em; color:#555">CCTV broadcast</em></div></div>
+    </div>
+    <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:8px;">
+      <a class="prod-link" href="https://mp.weixin.qq.com/s/p-NKVW1efD8NbETaz7fSgw" target="_blank">全案策划纪实 →</a>
+      <a class="prod-link" href="https://mp.weixin.qq.com/s/sU9DfgM68RGndLdw4_trwg" target="_blank">主创见面会 →</a>
+      <a class="prod-link" href="https://mp.weixin.qq.com/s/wFZ2JCyPb9FgE_9uIg83mQ" target="_blank">SeeSaw联名 →</a>
+      <a class="prod-link" href="https://mp.weixin.qq.com/s/cUWsx-xR8OURok1GiK8KcA" target="_blank">腾讯艺术纪录片 →</a>
+    </div>
+  </div>
+
+  <!-- Flagship 2: 拉贝日记 -->
+  <div class="flagship" data-year="2019" style="border-left-color: var(--accent2); margin-bottom:50px;">
+    <div class="flag-kicker">★ 国际项目 · International Campaign</div>
+    <div class="flag-title-zh">歌剧《拉贝日记》2019欧洲巡演宣传统筹</div>
+    <div class="flag-title-en">The Diaries of John Rabe — European Tour Publicity Director</div>
+    <div class="flag-role-row">
+      <span class="flag-role-tag" style="color:var(--accent2); border-color:var(--accent2)">国际传播</span>
+      <span class="flag-role-tag" style="color:var(--accent2); border-color:var(--accent2)">双语物料</span>
+      <span class="flag-role-tag" style="color:var(--accent2); border-color:var(--accent2)">全案执行</span>
+      <span class="flag-role-tag" style="color:var(--accent2); border-color:var(--accent2)">2019</span>
+    </div>
+    <div class="flag-desc">负责江苏大剧院原创歌剧在德国、奥地利两国三城的全套推广工作。从国内首演（3月，江苏大剧院）→ 国家大剧院演出（4月）→ 欧洲巡演，统筹完整宣传周期。建立中德双语宣传体系，协调4K歌剧电影制作，对接驻华使馆采访合作。</div>
+    <div class="flag-desc en-desc">Led all publicity for the opera's European tour across Germany and Austria — from the Jiangsu Grand Theatre premiere (March) to National Centre for the Performing Arts Beijing (April) and the European leg. Built a full Chinese–German bilingual publicity system, coordinated 4K opera film production, and liaised with embassies.</div>
+    <div class="flag-skill-pts">
+      <div class="fsp"><span class="skill-tag">国际媒体</span> 德国、奥地利当地媒体采访报道对接 <em>/ Local media liaison in Germany and Austria</em></div>
+      <div class="fsp"><span class="skill-tag">双语物料</span> 中德双语节目册、官网内容的编译与审核 <em>/ Chinese–German bilingual programme notes and website</em></div>
+      <div class="fsp"><span class="skill-tag">户外广告</span> 火车站、街道广告投放方案设计与协调 <em>/ OOH advertising at stations and street sites</em></div>
+      <div class="fsp"><span class="skill-tag">视频制作</span> 协调巡演纪录片与4K歌剧电影制作 <em>/ Tour documentary and 4K opera film coordination</em></div>
+    </div>
+    <div class="flag-metrics">
+      <div class="fmet"><span class="num">2国</span><div class="lbl">德国·奥地利 <em style="font-style:italic; font-size:0.9em; color:#555">Germany & Austria</em></div></div>
+      <div class="fmet"><span class="num">3城</span><div class="lbl">巡演城市 <em style="font-style:italic; font-size:0.9em; color:#555">Tour cities</em></div></div>
+      <div class="fmet"><span class="num">中德</span><div class="lbl">双语宣传体系 <em style="font-style:italic; font-size:0.9em; color:#555">Bilingual comms system</em></div></div>
+      <div class="fmet"><span class="num">4K</span><div class="lbl">歌剧电影 <em style="font-style:italic; font-size:0.9em; color:#555">Opera film</em></div></div>
+    </div>
+  </div>
+
+  <!-- Full Campaign Projects -->
+  <div class="proj-section-head">
+    <h3>演出宣传总统筹 <span class="en" style="font-size:13px">Overall Production Publicity — Full Campaign</span></h3>
+    <div class="proj-section-line"></div>
+  </div>
+  <div class="proj-grid" style="margin-bottom:50px;">
+
+    <div class="proj-card">
+      <div class="pc-cat">全案统筹 · Full Campaign</div>
+      <div class="pc-title-zh">舞剧《春之祭》</div>
+      <div class="pc-title-en">Rite of Spring · Dance Drama · 2024–25</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">全案策划</span><span class="pcs highlight">活动执行</span><span class="pcs">文创开发</span><span class="pcs">采访</span>
+      </div>
+      <div class="pc-desc">制定整体宣传方案，统筹物料，策划签名见面会、定妆照发布、文创产品开发与深度演员采访。微博话题阅读量超30万。</div>
+      <div class="pc-desc en-d">Developed full campaign strategy, coordinated all collateral, planned signed meet-and-greet, official costume photos, merchandise, and in-depth cast interviews. Weibo topic views exceeded 300K.</div>
+      <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:6px;">
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/WS7V04K3vgasQYnWWYnpDg" target="_blank">作品阐述 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/ehS0pe1mDvJgg0RAjXfkaQ" target="_blank">排练记录 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/HNnPYLcQ0F4yywQok87Sfg" target="_blank">发布会 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/z1qYlx1S9wtmVjJoQ5XxjA" target="_blank">见面会&文创 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/p3duyZMA3QjUHUnORc1j0g" target="_blank">定妆照 →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">全案统筹 · Full Campaign</div>
+      <div class="pc-title-zh">话剧《朝天宫下》三年宣传</div>
+      <div class="pc-title-en">Below Chaotian Palace · Drama · 2020–22</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">长效策划</span><span class="pcs">系列内容</span><span class="pcs">口碑运营</span>
+      </div>
+      <div class="pc-desc">制定三年持续宣传周期，策划「三年记」「国宝篇」「演员篇」等深度专题，建立剧目长效口碑传播机制。</div>
+      <div class="pc-desc en-d">Designed a three-year continuous campaign cycle; produced deep-dive editorial series building long-term word-of-mouth.</div>
+      <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:6px;">
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/SEw_0f4gxIAvWC9iaeur6Q" target="_blank">三年记 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/4TSxMeQOaRVoqGI1XzJq1Q" target="_blank">国宝篇 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/pYnFO6zmDdkaBmIDBZU_lg" target="_blank">演员篇 →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">全案统筹 · Full Campaign</div>
+      <div class="pc-title-zh">原创歌舞剧《天山问渠》</div>
+      <div class="pc-title-en">Heavenly Mountain · Original Musical · 2024</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">区域推广</span><span class="pcs">媒体对接</span><span class="pcs">深度采访</span>
+      </div>
+      <div class="pc-desc">江苏对口支援新疆项目，负责伊犁首演及乌鲁木齐宣传，协调石榴云、扬子晚报等，推文阅读量破万，近20篇主流媒体报道。</div>
+      <div class="pc-desc en-d">Jiangsu–Xinjiang cultural aid project; coordinated premiere publicity, media in Xinjiang, achieving 10K+ reads and nearly 20 mainstream media articles.</div>
+      <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:6px;">
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/FKWXbwiBi99z6LpiXz-V_g" target="_blank">亮相伊犁 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/lZJ2ke0_bVuRttWZMsWStQ" target="_blank">背景阐述 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/RxHS-2my1U8OnecJQyIsPQ" target="_blank">综合报道 →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">全案统筹 · Full Campaign</div>
+      <div class="pc-title-zh">原创音乐戏剧《花开的声音》</div>
+      <div class="pc-title-en">Sound of Blossoms · Original Musical · 2024</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">深度采访</span><span class="pcs">新闻发布</span><span class="pcs">内容策划</span>
+      </div>
+      <div class="pc-desc">深入采访作词作曲及主创，策划首演、七周年专场等宣传节点，协调发布50余篇媒体稿件，全面宣扬心佑工程公益主题。</div>
+      <div class="pc-desc en-d">In-depth interviews with composers and creative team; coordinated 50+ media pieces across premiere and anniversary milestones.</div>
+      <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:6px;">
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/tugoFQiboeQFTdpFm97arA" target="_blank">项目介绍 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/DbkzOEAAzyvCY22lRsfbuw" target="_blank">采访作词作曲 →</a>
+        <a class="pc-link" href="https://mp.weixin.qq.com/s/QR73LKDUCoaBB6CTYdBOGg" target="_blank">创作背景 →</a>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">全案统筹 · Full Campaign</div>
+      <div class="pc-title-zh">青春舞剧《野蜂飞舞》</div>
+      <div class="pc-title-en">Wild Bees · Youth Dance Drama · 2021</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">全案策划</span><span class="pcs highlight">文创开发</span><span class="pcs">评论家观演</span><span class="pcs">五四特刊</span>
+      </div>
+      <div class="pc-desc">青春向原创舞剧全年宣传统筹，策划多类型宣传活动，成功吸引年轻观众群体。</div>
+      <div class="pc-desc en-d">Full-year campaign for original youth dance drama, spanning press launch, critic screenings, merchandise, and targeted youth editorial.</div>
+      <div class="pc-desc" style="margin-top:8px; font-size:12px; color:#666;">
+        · 新闻发布会策划执行<br>
+        · 文具用品系列周边文创开发（全套）<br>
+        · 亮相第十一届中国儿童戏剧节<br>
+        · 入选"五个一工程"相关报道<br>
+        · 组织评论家观演<br>
+        · 五四青年节特刊策划<br>
+        · 与原著作家黄蓓佳共同举办阅读分享会及电台分享<br>
+        · 排练花絮全记录
+      </div>
+      <div class="pc-desc en-d" style="font-size:11px;">
+        · Press launch · Full stationery merchandise range · 11th China Children's Theatre Festival · "Five One Project" award coverage · Critic screenings organised · May 4th Youth Day special editorial · Reading event & radio show co-hosted with original author Huang Beijia · Full rehearsal documentation
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">全案统筹 · Full Campaign</div>
+      <div class="pc-title-zh">儿童声乐套曲《因为爸爸》</div>
+      <div class="pc-title-en">Because of Father · Children's Song Cycle · 2021 & 2024</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">全案统筹</span><span class="pcs highlight">公安厅联动</span><span class="pcs">深度采访</span><span class="pcs">公益</span>
+      </div>
+      <div class="pc-desc">原创儿童声乐作品全案宣传推广，多维度呈现作品社会价值，获广泛社会共鸣。</div>
+      <div class="pc-desc en-d">Full campaign for original children's song cycle, amplifying its social and emotional themes through partnerships, interviews, and community outreach.</div>
+      <div class="pc-desc" style="margin-top:8px; font-size:12px; color:#666;">
+        · 与江苏省公安厅共同策划宣传活动<br>
+        · 直击排练现场报道<br>
+        · 创作者深度访谈（作词·作曲）<br>
+        · 联动同名小说，与作家黄蓓佳共同举办阅读分享会<br>
+        · 新闻发布会策划执行
+      </div>
+      <div class="pc-desc en-d" style="font-size:11px;">
+        · Co-produced campaign activities with Jiangsu Provincial Public Security Department · On-site rehearsal coverage · In-depth creator interviews (lyricist & composer) · Joint reading event with original novel author Huang Beijia · Press launch
+      </div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/mfwkE0280JC-PGbVw8Vf8w" target="_blank">项目介绍 →</a>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/tzpzkp7u_Ga0RB3wPWUCLQ" target="_blank">创作者访谈 →</a>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/FEs5H1BGDSM5nxfTAJlISg" target="_blank">同名小说 →</a>
+    </div>
+
+  </div>
+
+  <!-- Events: Meet & Greets -->
+  <div class="proj-section-head">
+    <h3>策划活动 <span class="en" style="font-size:13px">Event Planning & Execution — by Category</span></h3>
+    <div class="proj-section-line"></div>
+  </div>
+
+  <div class="event-sub-label">见面会 · Meet-and-Greets & Artist Talks</div>
+  <div class="proj-grid" style="margin-bottom:28px;">
+
+    <div class="proj-card">
+      <div class="pc-cat">见面会 · Meet-and-Greet</div>
+      <div class="pc-title-zh">于佩尔《樱桃园》见面会</div>
+      <div class="pc-title-en">Isabelle Huppert — The Cherry Orchard · 2025</div>
+      <div class="pc-skills"><span class="pcs highlight">活动执行</span><span class="pcs">嘉宾统筹</span><span class="pcs">媒体邀约</span></div>
+      <div class="pc-desc">为国际戏剧大师作品策划高规格见面会，邀请专业剧评人、高校师生与媒体，创造深度艺术对话体验。</div>
+      <div class="pc-desc en-d">High-profile meet-and-greet for Isabelle Huppert, curating guest mix of critics, academics, and press for substantive artistic dialogue.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/opJlJgX-Gvz5dusbNq08XQ" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">见面会 · Meet-and-Greet</div>
+      <div class="pc-title-zh">《温暖的味道》见面会（靳东、刘敏涛）</div>
+      <div class="pc-title-en">The Warmth of Food — Meet & Greet · 2024</div>
+      <div class="pc-skills"><span class="pcs highlight">活动执行</span><span class="pcs highlight">话题营销</span><span class="pcs">媒体邀约</span></div>
+      <div class="pc-desc">策划知名演员靳东、刘敏涛主演话剧见面会，精准策动媒体聚焦，打造预售热度，活动引发大量社交传播。</div>
+      <div class="pc-desc en-d">Planned meet-and-greet for leading film/TV stars; drove media attention, pre-sale momentum, and strong social amplification.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/CcsX__35lmbGoeLTL6v3RA" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">见面会 · Meet-and-Greet</div>
+      <div class="pc-title-zh">《云门舞集》主创见面会</div>
+      <div class="pc-title-en">Cloud Gate Dance Theatre — Artist Talk · 2023</div>
+      <div class="pc-skills"><span class="pcs highlight">活动执行</span><span class="pcs">国际艺术家</span><span class="pcs">内容记录</span></div>
+      <div class="pc-desc">国际现代舞团与观众深度交流，策划对话形式、媒体采访，并完成全程内容记录与推广发布。</div>
+      <div class="pc-desc en-d">Facilitated deep artistic dialogue between international dance company and audience; managed press coordination and content documentation.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/QvEdHpGDjwrYaU_ZEP_BHA" target="_blank">见面会(一) →</a>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/4wrC3JItzjiTXjXRQxcM9A" target="_blank">见面会(二) →</a>
+    </div>
+
+  </div>
+
+  <!-- Press Conferences -->
+  <div class="event-sub-label">发布会 · Press Conferences & Launches</div>
+  <div class="proj-grid" style="margin-bottom:28px;">
+
+    <div class="proj-card">
+      <div class="pc-cat">发布会 · Press Conference</div>
+      <div class="pc-title-zh">江苏大剧院戏剧节「南大戏剧周」发布会</div>
+      <div class="pc-title-en">JCPA Theatre Festival Launch · 2025</div>
+      <div class="pc-skills"><span class="pcs highlight">活动执行</span><span class="pcs">高校联动</span><span class="pcs">稿件撰写</span></div>
+      <div class="pc-desc">年度品牌活动策划，主创见面会组织，新闻稿撰写，打造高校与剧院互动品牌，吸引年轻观众群体。</div>
+      <div class="pc-desc en-d">Annual brand event planning; creative team meet coordination; press release writing; youth audience outreach through university partnership.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/J5CAiKI75Vnmar3paGnlrQ" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">发布会 · Press Conference</div>
+      <div class="pc-title-zh">2019春节演出季发布会 & 马林斯基发布会</div>
+      <div class="pc-title-en">Spring Season Launch · Mariinsky Press Conference · 2019</div>
+      <div class="pc-skills"><span class="pcs highlight">发布会统筹</span><span class="pcs">媒体邀约</span><span class="pcs">文稿撰写</span></div>
+      <div class="pc-desc">统筹全年多场重要演出季及艺术节发布会，负责媒体邀约、流程设计、新闻通稿及现场全程执行。</div>
+      <div class="pc-desc en-d">Coordinated multiple season and festival press conferences: guest invitations, run-of-show design, press copy, and full on-site management.</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">发布会 · Press Conference</div>
+      <div class="pc-title-zh">《春之祭》《野蜂飞舞》《花开的声音》等自制剧首演发布</div>
+      <div class="pc-title-en">Original Production Launches · Multiple Years</div>
+      <div class="pc-skills"><span class="pcs highlight">发布会统筹</span><span class="pcs">原创剧目</span><span class="pcs">主创采访</span></div>
+      <div class="pc-desc">多部原创自制剧目新闻发布会策划执行，包括主创介绍、排练花絮披露、专业媒体特邀采访等环节设计。</div>
+      <div class="pc-desc en-d">Press launches for multiple original productions: creative introductions, behind-the-scenes reveals, exclusive press interviews.</div>
+    </div>
+
+  </div>
+
+  <!-- Post-show talks -->
+  <div class="event-sub-label">演后谈 · Post-show Talks</div>
+  <div class="proj-grid" style="margin-bottom:28px;">
+
+    <div class="proj-card">
+      <div class="pc-cat">演后谈 · Post-show Talk</div>
+      <div class="pc-title-zh">《幺幺洞捌》演后谈（倪妮版）</div>
+      <div class="pc-title-en">Post-show Talk featuring Ni Ni · 2021</div>
+      <div class="pc-skills"><span class="pcs highlight">演后谈主持</span><span class="pcs">现场执行</span></div>
+      <div class="pc-desc">策划并现场主持明星版话剧演后谈，协调演员、导演与观众三方互动，创造深度艺术交流机会。</div>
+      <div class="pc-desc en-d">Planned and hosted post-show dialogue involving actor Ni Ni, the director, and audience for meaningful artistic exchange.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/pecPgrI1mc-Sy54AwyEScA" target="_blank">查看详情 →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">演后谈 · Post-show Talk</div>
+      <div class="pc-title-zh">陶身体剧场「圆运动体系」工作坊</div>
+      <div class="pc-title-en">TAO Dance Theatre Workshop · 2024–25</div>
+      <div class="pc-skills"><span class="pcs highlight">演后谈</span><span class="pcs">工作坊宣传</span><span class="pcs">当代舞蹈</span></div>
+      <div class="pc-desc">策划实验舞蹈工坊及演后交流，撰写艺术理论推广文案，组织媒体采访，推动当代舞蹈学术探讨与传播。</div>
+      <div class="pc-desc en-d">Workshop and post-show exchange planning; arts theory copywriting; media coordination for contemporary dance scholarship.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/ZmYjG4Pj8227xgFMz2INTw" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">演后谈 · Post-show Talk</div>
+      <div class="pc-title-zh">多剧目演后谈系列（2018–2025）</div>
+      <div class="pc-title-en">Post-show Talk Series · Ongoing</div>
+      <div class="pc-skills"><span class="pcs highlight">演后谈策划</span><span class="pcs">观众互动</span></div>
+      <div class="pc-desc">历年独立策划并执行多场演后谈，形成剧院品牌化演后交流机制，覆盖话剧、现代舞、歌剧、音乐剧等多个门类。</div>
+      <div class="pc-desc en-d">Independently planned and executed post-show talks across drama, contemporary dance, opera, and musicals, establishing a branded audience-engagement format.</div>
+    </div>
+
+  </div>
+
+  <!-- Alliance & Industry -->
+  <div class="event-sub-label">联席会议 & 行业活动 · Alliance Meetings & Industry Events</div>
+  <div class="proj-grid" style="margin-bottom:28px;">
+
+    <div class="proj-card">
+      <div class="pc-cat">联席会议 · Alliance Meeting</div>
+      <div class="pc-title-zh">大运河剧院联盟联席会议</div>
+      <div class="pc-title-en">Grand Canal Theatre Alliance Plenary · 2019–21</div>
+      <div class="pc-skills"><span class="pcs highlight">行业活动</span><span class="pcs">多方统筹</span><span class="pcs">媒体保障</span></div>
+      <div class="pc-desc">策划落地大型行业峰会，统筹28家联盟剧院媒体联动，策划「我家就在岸上住」端午专题，百家媒体同步发布。</div>
+      <div class="pc-desc en-d">Major industry summit planning; coordinated joint campaign across 28 alliance theatres; Dragon Boat Festival feature syndicated across hundreds of outlets.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/9oEvwIwrR9gHzN0GwYD2dw" target="_blank">联席会议报道 →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">主题报道 · Special Coverage</div>
+      <div class="pc-title-zh">紫金文化艺术节 & 两会主题报道</div>
+      <div class="pc-title-en">Zijin Arts Festival & National Political Sessions Coverage</div>
+      <div class="pc-skills"><span class="pcs highlight">重大活动保障</span><span class="pcs">新闻报道</span><span class="pcs">媒体统筹</span></div>
+      <div class="pc-desc">全程保障省级重大文化艺术节及两会主题宣传报道，统筹媒体邀约、现场保障与新闻稿发布，直播场次观看量逾800万次。</div>
+      <div class="pc-desc en-d">Full-cycle media management for provincial arts festival and national political sessions coverage; live-stream sessions exceeded 8M views.</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">大学生戏剧展演 · Student Theatre</div>
+      <div class="pc-title-zh">紫金文化艺术节大学生戏剧展演</div>
+      <div class="pc-title-en">Zijin Festival University Drama Competition</div>
+      <div class="pc-skills"><span class="pcs highlight">活动统筹</span><span class="pcs">高校联动</span><span class="pcs">内容策划</span></div>
+      <div class="pc-desc">策划执行面向高校学生群体的戏剧展演活动宣传，吸引年轻观众，打造剧院与高校之间的长效联动品牌。</div>
+      <div class="pc-desc en-d">Publicity and logistics for university student drama competition, building a sustainable pipeline between theatre and campus communities.</div>
+    </div>
+
+  </div>
+
+  <!-- Digital / Livestream -->
+  <div class="event-sub-label">云平台直播 & 数字传播 · Live-streaming & Digital Platforms</div>
+  <div class="proj-grid" style="margin-bottom:28px;">
+
+    <div class="proj-card">
+      <div class="pc-cat">云平台 · Cloud Platform</div>
+      <div class="pc-title-zh">「爱艺在线」— 与江苏有线共同打造</div>
+      <div class="pc-title-en">AiYi Online — Co-built with Jiangsu Cable TV</div>
+      <div class="pc-skills"><span class="pcs highlight">平台合作</span><span class="pcs highlight">内容策划</span><span class="pcs">直播制作</span></div>
+      <div class="pc-desc">与江苏有线共同打造「爱艺在线」演艺直播平台，从内容策划、节目排期到传播推广全流程参与，为线上观演建立专属渠道。</div>
+      <div class="pc-desc en-d">Co-developed the 'AiYi Online' performing arts streaming platform with Jiangsu Cable TV — involved from content planning and scheduling through to distribution and promotion.</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">云剧场直播 · Cloud Theatre</div>
+      <div class="pc-title-zh">「云剧场」品牌直播 × 人民日报</div>
+      <div class="pc-title-en">Cloud Theatre × People's Daily · 2020–21</div>
+      <div class="pc-skills"><span class="pcs highlight">直播策划</span><span class="pcs highlight">媒体联合</span><span class="pcs">内容创新</span></div>
+      <div class="pc-desc">疫情期间创立「云剧场」品牌，与人民日报联合策划多场大型直播，拓展50+平台渠道，全年960万+观看。</div>
+      <div class="pc-desc en-d">Founded 'Cloud Theatre' live-streaming brand during COVID; co-produced events with People's Daily; 50+ platform distribution, 9.6M+ annual views.</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">电台播客 · Radio & Podcast</div>
+      <div class="pc-title-zh">电台播客栏目创立</div>
+      <div class="pc-title-en">Radio Column & Podcast Launch</div>
+      <div class="pc-skills"><span class="pcs highlight">栏目创立</span><span class="pcs">内容策划</span><span class="pcs">电台合作</span></div>
+      <div class="pc-desc">在喜马拉雅电台策划创立多档演艺内容专栏（《福尔摩斯谜案》《拉贝日记》《江南之声》专题），与江苏音乐广播等6家电台建立深度合作，全年制作剧院形象及项目专题60余档。</div>
+      <div class="pc-desc en-d">Launched multiple podcast series on Himalaya FM; established deep partnerships with 6 radio stations; produced 60+ branded programme episodes annually.</div>
+    </div>
+
+  </div>
+
+  <!-- Arts Education & Public Interest -->
+  <div class="event-sub-label">艺术普及教育 & 公益活动 · Arts Education & Public Interest</div>
+  <div class="proj-grid" style="margin-bottom:28px;">
+
+    <div class="proj-card">
+      <div class="pc-cat">艺术普及 · Arts Education</div>
+      <div class="pc-title-zh">现代舞 · 戏曲艺术普及体验活动</div>
+      <div class="pc-title-en">Contemporary Dance & Xiqu Arts Education Experiences</div>
+      <div class="pc-skills"><span class="pcs highlight">艺术普及</span><span class="pcs">活动策划</span><span class="pcs">观众培育</span></div>
+      <div class="pc-desc">策划面向公众的现代舞、戏曲等艺术体验活动，降低艺术欣赏门槛，培育剧院新观众群体，拓展品牌影响力。</div>
+      <div class="pc-desc en-d">Planned public arts education experiences in contemporary dance and traditional Chinese theatre, lowering barriers to entry and nurturing new audience segments.</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">观剧团 · Audience Groups</div>
+      <div class="pc-title-zh">组织观剧团活动</div>
+      <div class="pc-title-en">Theatre Audience Group Organisation</div>
+      <div class="pc-skills"><span class="pcs highlight">活动组织</span><span class="pcs">社群运营</span><span class="pcs">票务协调</span></div>
+      <div class="pc-desc">策划组织多场观剧团活动，面向不同受众群体（高校、社区、企业），协调票务、接待、活动前后内容策划与反馈收集。</div>
+      <div class="pc-desc en-d">Organised group theatre visits for universities, communities, and corporates — managing ticketing, hospitality, and pre/post-visit content.</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">艺术公益 · Arts for Good</div>
+      <div class="pc-title-zh">疫情期间「爱医卡」艺术公益策划</div>
+      <div class="pc-title-en">"Love for Doctors" Art Card — COVID Public Interest Campaign</div>
+      <div class="pc-skills"><span class="pcs highlight">公益策划</span><span class="pcs">创意策划</span><span class="pcs">社会传播</span></div>
+      <div class="pc-desc">疫情期间策划「爱医卡」艺术公益活动，以演出艺术的形式向医护人员致敬，引发广泛社会共鸣与媒体关注。</div>
+      <div class="pc-desc en-d">During COVID, conceived 'Love for Doctors' arts tribute campaign honouring frontline medical workers through performing arts — generating widespread social resonance and media coverage.</div>
+    </div>
+
+  </div>
+
+  <!-- Gallery & Film -->
+  <div class="proj-section-head">
+    <h3>美术馆 & 水滴影院 <span class="en" style="font-size:13px">Art Gallery & Cinema Activations</span></h3>
+    <div class="proj-section-line"></div>
+  </div>
+  <div class="proj-grid" style="margin-bottom:50px;">
+
+    <div class="proj-card">
+      <div class="pc-cat">展览宣传 · Gallery Exhibition</div>
+      <div class="pc-title-zh">「青春飞扬」中国青年版画家提名展</div>
+      <div class="pc-title-en">Young Chinese Printmakers Invitational Exhibition · Annual</div>
+      <div class="pc-skills"><span class="pcs highlight">展览宣传</span><span class="pcs">策划统筹</span><span class="pcs">媒体报道</span></div>
+      <div class="pc-desc">江苏大剧院美术馆年度品牌展览，历届统筹宣传推广。2024届邀请全国46位专家推荐216名候选人，77件参展作品，10件被馆藏。开幕式及媒体报道全程策划执行。</div>
+      <div class="pc-desc en-d">Annual flagship exhibition of the JCPA Art Gallery. For the 2024 edition: 216 nominees from 46 national experts, 77 exhibited works, 10 acquired for permanent collection. Full PR coordination and opening ceremony management.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/NiSd_o7MSxWqmDRjrokhxg" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">展览宣传 · Gallery Exhibition</div>
+      <div class="pc-title-zh">三峡美术馆摄影精品展（南京巡展）</div>
+      <div class="pc-title-en">Three Gorges Museum Photography Exhibition — Nanjing Tour · 2025</div>
+      <div class="pc-skills"><span class="pcs highlight">巡展宣传</span><span class="pcs">媒体对接</span></div>
+      <div class="pc-desc">宜昌市三峡美术馆馆藏摄影精品展南京巡展宣传统筹，撰写展览介绍与媒体通稿，组织社交媒体推广。</div>
+      <div class="pc-desc en-d">PR coordination for the Three Gorges Museum photography touring exhibition in Nanjing; exhibition copywriting, press release, and social media promotion.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/FQKetNdWPZDhu1hNXPUJcg" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">展览宣传 · Exhibition</div>
+      <div class="pc-title-zh">何以长江——长江文化数字大展</div>
+      <div class="pc-title-en">The Grandeur of the Yangtze — Digital Cultural Exhibition · 2023</div>
+      <div class="pc-skills"><span class="pcs highlight">数字展览</span><span class="pcs">媒体统筹</span></div>
+      <div class="pc-desc">大型文化数字展览宣传推广，深度挖掘长江文化历史意蕴与当代价值，撰写推广文案，统筹媒体报道，推动地域文化广泛传播。</div>
+      <div class="pc-desc en-d">Publicity for large-scale digital cultural exhibition; content strategy emphasising Yangtze River heritage, media coordination and social promotion.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/CUKqBieWqw8iiplYlHsrmQ" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">展览宣传 · Exhibition</div>
+      <div class="pc-title-zh">少儿艺术展 & 常设美术馆展览宣传</div>
+      <div class="pc-title-en">Children's Art Exhibition & Ongoing Gallery Programming</div>
+      <div class="pc-skills"><span class="pcs highlight">展览统筹</span><span class="pcs">美育传播</span></div>
+      <div class="pc-desc">统筹美术馆140+场展览的宣传推广，包括「我们的节日——第二届江苏大剧院少儿艺术展」等特色主题展览，将专业艺术与大众审美结合，推动美育教育传播。</div>
+      <div class="pc-desc en-d">Coordinated publicity for 140+ gallery exhibitions including the annual Children's Art Exhibition, connecting professional art with general audiences to promote aesthetic education.</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">电影活动 · Cinema</div>
+      <div class="pc-title-zh">2024艺术电影观影季——水滴影院</div>
+      <div class="pc-title-en">2024 Art Film Season — Shuidi Cinema</div>
+      <div class="pc-skills"><span class="pcs highlight">活动策划</span><span class="pcs">内容宣传</span><span class="pcs">观众运营</span></div>
+      <div class="pc-desc">统筹「艺术电影观影季」宣传活动，涵盖《永不消逝的电波》等经典老片展映，撰写影评与推广文案，组织观影团，推动经典影片走进当代观众视野。</div>
+      <div class="pc-desc en-d">Coordinated the 'Art Film Season' at Shuidi Cinema — curating classic and art-house film screening promotions, writing film reviews and event copy, organising screening groups.</div>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">电影活动 · Cinema</div>
+      <div class="pc-title-zh">4K歌剧电影《拉贝日记》制作宣传</div>
+      <div class="pc-title-en">4K Opera Film: The Diaries of John Rabe</div>
+      <div class="pc-skills"><span class="pcs highlight">纪录片宣传</span><span class="pcs">4K制作</span></div>
+      <div class="pc-desc">协调省广电总台4K歌剧电影与巡演纪录片制作全程宣传联动，将舞台艺术转化为影像作品，拓展演出的传播半径与受众覆盖面。</div>
+      <div class="pc-desc en-d">Coordinated publicity for the 4K opera film and tour documentary production with Jiangsu Broadcasting Corporation, extending the production's reach beyond live audiences.</div>
+    </div>
+
+  </div>
+
+  <!-- Cross-brand -->
+  <div class="proj-section-head">
+    <h3>跨界合作 <span class="en" style="font-size:13px">Cross-sector Brand Partnerships</span></h3>
+    <div class="proj-section-line"></div>
+  </div>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="pc-cat">品牌联名 · Brand Collab</div>
+      <div class="pc-title-zh">《红楼梦》× 瑞幸咖啡</div>
+      <div class="pc-title-en">Dream of the Red Mansion × Luckin Coffee · 2024</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">跨界策划</span><span class="pcs">内容协同</span><span class="pcs">话题营销</span>
+      </div>
+      <div class="pc-desc">策划执行艺术IP与大众消费品牌联名，联名产品与线上活动协同，推动古典艺术年轻化传播，相关话题累计破亿曝光。</div>
+      <div class="pc-desc en-d">Planned and executed arts-IP × consumer brand co-op; co-branded product and online activations drove youth-skewing reach with 100M+ topic impressions.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/4YlYB1FdzlGlYJjsRltcCA" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">品牌联名 · Brand Collab</div>
+      <div class="pc-title-zh">《红楼梦》× 茶颜悦色</div>
+      <div class="pc-title-en">Dream of the Red Mansion × Chayanyuese · 2022</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">跨界策划</span><span class="pcs">品牌联动</span>
+      </div>
+      <div class="pc-desc">与知名茶饮品牌联名，将古典舞台艺术以更年轻方式走进大众日常消费场景，创造话题传播效应。（获江苏文投集团创新奖）</div>
+      <div class="pc-desc en-d">Co-branding with leading tea drink brand; brought classical arts into everyday consumer moments. Won Innovation Award from Jiangsu Cultural Investment Group.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/rWEZOxK6lzGmW_crFh1KTQ" target="_blank">查看 View →</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="pc-cat">品牌联名 · Brand Collab</div>
+      <div class="pc-title-zh">《红高粱家族》× SeeSaw咖啡</div>
+      <div class="pc-title-en">Red Sorghum × SeeSaw Coffee · 2023</div>
+      <div class="pc-skills">
+        <span class="pcs highlight">跨界策划</span><span class="pcs">消费联动</span>
+      </div>
+      <div class="pc-desc">戏剧与精品咖啡品牌创意联动，整合资源创造话题，拓展演出消费链条，实现跨界传播放大效应。</div>
+      <div class="pc-desc en-d">Drama × specialty coffee creative co-op, integrating resources to broaden the show's consumer ecosystem and amplify cross-audience reach.</div>
+      <a class="pc-link" href="https://mp.weixin.qq.com/s/wFZ2JCyPb9FgE_9uIg83mQ" target="_blank">查看 View →</a>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- ══════════ PRODUCTIONS LIAISON ══════════ -->
+<section id="productions" style="background: var(--bg);">
+<div class="wrap">
+  <div class="sec-header">
+    <span class="sec-num">04</span>
+    <div class="sec-title">演出对接 <span class="en">Productions Liaison & Publicity</span></div>
+  </div>
+
+  <p style="font-size:13.5px; color:var(--muted); margin-bottom:10px; line-height:1.8;">
+    此处列举近年来部分对接的演出项目，按演出门类分类整理，涵盖内容沟通、物料获取、媒体推广、发布文案等日常宣传对接工作。<br>
+    <em style="font-family:'Libre Baskerville',serif; font-style:italic; color:#555; font-size:0.9em;">A selection of productions handled in recent years, organised by genre — covering information coordination, material sourcing, media promotion, and copywriting for each show.</em>
+  </p>
+  <p style="font-size:12px; color:var(--faint); margin-bottom:50px; font-style:italic; font-family:'Libre Baskerville',serif;">
+    * 标注 ★ 为担任宣传总统筹项目（全案主导）；其余为演出宣传对接（引进项目协作）<br>
+    ★ denotes productions where Lottie served as Overall Publicity Director (full campaign lead); others are liaison/support roles for incoming productions.
+  </p>
+
+  <!-- ── STYLE BLOCK FOR THIS SECTION ── -->
+  <style>
+  .genre-block { margin-bottom: 56px; }
+  .genre-head {
+    display: flex; align-items: center; gap: 14px;
+    padding-bottom: 14px; margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .genre-ico { font-size: 22px; }
+  .genre-zh { font-family: 'Libre Baskerville', serif; font-size: 20px; font-weight: 700; color: var(--white); }
+  .genre-en { font-family: 'Libre Baskerville', serif; font-style: italic; font-size: 13px; color: var(--muted); margin-left: 4px; }
+  .genre-count { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,169,110,0.3); padding: 3px 10px; margin-left: auto; }
+
+  .prod-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .prod-item {
+    background: var(--card);
+    padding: 16px 18px;
+    transition: background 0.15s;
+    position: relative;
+  }
+  .prod-item:hover { background: #222; }
+
+  .prod-item.lead { border-top: 2px solid var(--gold); }
+
+  .prod-star {
+    position: absolute; top: 10px; right: 12px;
+    font-size: 10px; color: var(--gold); font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .prod-title-zh {
+    font-size: 14px; font-weight: 600;
+    color: var(--white); line-height: 1.3; margin-bottom: 3px;
+  }
+  .prod-title-en {
+    font-family: 'Libre Baskerville', serif; font-style: italic;
+    font-size: 11px; color: var(--faint); margin-bottom: 8px; line-height: 1.4;
+  }
+  .prod-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .pt { font-size: 9px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border-light); padding: 2px 6px; }
+  .pt.lead-tag { color: var(--gold); border-color: rgba(201,169,110,0.35); background: rgba(201,169,110,0.06); }
+  .prod-note { font-size: 11.5px; color: #666; line-height: 1.5; font-style: italic; font-family: 'Libre Baskerville', serif; }
+  .prod-link { display: inline-block; margin-top: 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(200,118,58,0.4); }
+
+  @media (max-width: 900px) { .prod-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .prod-grid { grid-template-columns: 1fr; } }
+  </style>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 1. 舞剧 DANCE DRAMA -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">💃</span>
+      <span class="genre-zh">舞剧 <span class="genre-en">Dance Drama</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item lead">
+        <span class="prod-star">★ 全案</span>
+        <div class="prod-title-zh">民族舞剧《红楼梦》</div>
+        <div class="prod-title-en">Dream of the Red Chamber</div>
+        <div class="prod-tags"><span class="pt lead-tag">全案统筹</span><span class="pt lead-tag">多年</span><span class="pt">海外巡演</span><span class="pt">联名</span></div>
+        <div class="prod-note">2021–25 · 新加坡/港澳台巡演 · 瑞幸×茶颜悦色联名 · 2.4亿超话</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/4YlYB1FdzlGlYJjsRltcCA" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item lead">
+        <span class="prod-star">★ 全案</span>
+        <div class="prod-title-zh">舞剧《春之祭》</div>
+        <div class="prod-title-en">Rite of Spring</div>
+        <div class="prod-tags"><span class="pt lead-tag">全案统筹</span><span class="pt">文创</span><span class="pt">见面会</span></div>
+        <div class="prod-note">2024–25 · 签名见面会 · 文创开发 · 微博话题30万+</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/5epDNsG8JleXO4RJlW3UFQ" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item lead">
+        <span class="prod-star">★ 全案</span>
+        <div class="prod-title-zh">原创歌舞剧《天山问渠》</div>
+        <div class="prod-title-en">Heavenly Mountain</div>
+        <div class="prod-tags"><span class="pt lead-tag">全案统筹</span><span class="pt">文化润疆</span></div>
+        <div class="prod-note">2024 · 新疆伊犁首演 · 近20篇媒体报道</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/RxHS-2my1U8OnecJQyIsPQ" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">舞剧《西施》</div>
+        <div class="prod-title-en">Xi Shi</div>
+        <div class="prod-tags"><span class="pt">见面会</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024 · 见面会策划执行</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">舞剧《安娜·卡列尼娜》</div>
+        <div class="prod-title-en">Anna Karenina</div>
+        <div class="prod-tags"><span class="pt">俄罗斯引进</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2023</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/6tOb8AV6tW2GFp0064ClQw" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">舞剧《咏春》</div>
+        <div class="prod-title-en">Wing Chun</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2023</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">芭蕾舞剧《奥涅金》</div>
+        <div class="prod-title-en">Onegin · Ballet</div>
+        <div class="prod-tags"><span class="pt">芭蕾</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2022</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/pe5yrEkur4XKivtJDRKPhg" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">舞剧《孔子》</div>
+        <div class="prod-title-en">Confucius</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2023</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 2. 话剧 DRAMA -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🎭</span>
+      <span class="genre-zh">话剧 <span class="genre-en">Drama / Spoken Theatre</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item lead">
+        <span class="prod-star">★ 全案</span>
+        <div class="prod-title-zh">话剧《红高粱家族》</div>
+        <div class="prod-title-en">Red Sorghum Clan</div>
+        <div class="prod-tags"><span class="pt lead-tag">全案统筹</span><span class="pt lead-tag">莫言</span><span class="pt">央视</span></div>
+        <div class="prod-note">2023–24 · 21城34场 · SeeSaw联名 · 央视综艺频道</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/p-NKVW1efD8NbETaz7fSgw" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item lead">
+        <span class="prod-star">★ 全案</span>
+        <div class="prod-title-zh">话剧《朝天宫下》</div>
+        <div class="prod-title-en">Below Chaotian Palace</div>
+        <div class="prod-tags"><span class="pt lead-tag">全案统筹</span><span class="pt lead-tag">三年</span></div>
+        <div class="prod-note">2020–22 · 三年持续宣传 · 系列深度专题</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/SEw_0f4gxIAvWC9iaeur6Q" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《正红旗下》</div>
+        <div class="prod-title-en">Under the Red Banner</div>
+        <div class="prod-tags"><span class="pt">见面会</span><span class="pt">记者招待会</span></div>
+        <div class="prod-note">2024 · 见面会 + 记者招待会</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/FmvfAzCnxYDurlyfxZCdaQ" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《温暖的味道》</div>
+        <div class="prod-title-en">The Warmth of Food</div>
+        <div class="prod-tags"><span class="pt">靳东·刘敏涛</span><span class="pt">见面会</span></div>
+        <div class="prod-note">2024 · 明星见面会策划执行</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/CcsX__35lmbGoeLTL6v3RA" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">舞台剧《两京十五日》</div>
+        <div class="prod-title-en">Fifteen Days in Two Capitals</div>
+        <div class="prod-tags"><span class="pt">马伯庸</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2023</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/ccXOYxG19s_J8edg7rAc0Q" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">舞台剧《弗兰肯斯坦》</div>
+        <div class="prod-title-en">Frankenstein</div>
+        <div class="prod-tags"><span class="pt">主创见面会</span></div>
+        <div class="prod-note">2023 · 主创主演见面会策划</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/0jDTgnAmEBIG8d38ORnzjw" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《暗恋桃花源》</div>
+        <div class="prod-title-en">Secret Love in Peach Blossom Land</div>
+        <div class="prod-tags"><span class="pt">赖声川</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2023</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/T5IEOWrfVtZACDfsDEibgQ" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《人世间》</div>
+        <div class="prod-title-en">Life in the Human World</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2022</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/NPczp7Vg4B5J2i0OsLwsGA" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《幺幺洞捌》（倪妮版）</div>
+        <div class="prod-title-en">Zero Zero Eight — feat. Ni Ni</div>
+        <div class="prod-tags"><span class="pt">演后谈主持</span></div>
+        <div class="prod-note">2021 · 演后谈策划+主持</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/pecPgrI1mc-Sy54AwyEScA" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《林则徐》</div>
+        <div class="prod-title-en">Lin Zexu</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2021</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/rrFSP32blMsTuuktqULMgQ" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《四世同堂》</div>
+        <div class="prod-title-en">Four Generations Under One Roof</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《无人生还》</div>
+        <div class="prod-title-en">And Then There Were None</div>
+        <div class="prod-tags"><span class="pt">阿加莎</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《玩偶之家2：娜拉归来》</div>
+        <div class="prod-title-en">A Doll's House, Part 2</div>
+        <div class="prod-tags"><span class="pt">卢靖姗</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/f3ld7i9Nht6dAypSUaqTng" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《初步举证》（辛芷蕾版）</div>
+        <div class="prod-title-en">Witness for the Prosecution</div>
+        <div class="prod-tags"><span class="pt">辛芷蕾</span><span class="pt">人物专访</span></div>
+        <div class="prod-note">2023 · 辛芷蕾专访</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/Lc75Kyd0Vo5m1LzPvvFcwQ" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《白鹿原》</div>
+        <div class="prod-title-en">White Deer Plain</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2025</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">话剧《四张机》《双枰记》</div>
+        <div class="prod-title-en">Four Looms · Twin Board</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024–25</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 3. 音乐剧 MUSICAL -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🎶</span>
+      <span class="genre-zh">音乐剧 <span class="genre-en">Musical Theatre</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item">
+        <div class="prod-title-zh">音乐剧《剧院魅影》</div>
+        <div class="prod-title-en">The Phantom of the Opera</div>
+        <div class="prod-tags"><span class="pt">系列活动</span><span class="pt">500万+曝光</span></div>
+        <div class="prod-note">2023 · 系列配套活动，总曝光500万+</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/x7FRP2GwAuxs7Hs8jJY5yw" target="_blank">查看 →</a>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/x7FRP2GwAuxs7Hs8jJY5yw" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">音乐剧《基督山伯爵》</div>
+        <div class="prod-title-en">The Count of Monte Cristo</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">音乐剧《妈妈咪呀！》</div>
+        <div class="prod-title-en">Mamma Mia!</div>
+        <div class="prod-tags"><span class="pt">见面会</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2019 · 见面会策划执行</div>
+      </div>
+
+      <div class="prod-item lead">
+        <span class="prod-star">★ 全案</span>
+        <div class="prod-title-zh">原创音乐戏剧《花开的声音》</div>
+        <div class="prod-title-en">Sound of Blossoms</div>
+        <div class="prod-tags"><span class="pt lead-tag">全案统筹</span><span class="pt">公益</span></div>
+        <div class="prod-note">2024 · 心佑工程公益主题 · 50+篇媒体稿</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/tugoFQiboeQFTdpFm97arA" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">摇滚音乐剧《摇滚学校》</div>
+        <div class="prod-title-en">School of Rock</div>
+        <div class="prod-tags"><span class="pt">上海探班</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2019 · 上海探班报道</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">《贝隆夫人》</div>
+        <div class="prod-title-en">Evita</div>
+        <div class="prod-tags"><span class="pt">发布会</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2019 · 上海新闻发布会</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- CONCERTS 演唱会 -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🎸</span>
+      <span class="genre-zh">演唱会 <span class="genre-en">Concerts & Live Music</span></span>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item">
+        <div class="prod-title-zh">周深 C-929星球巡回演唱会 南京站</div>
+        <div class="prod-title-en">Zhou Shen — C-929 Planet Tour · Nanjing</div>
+        <div class="prod-tags"><span class="pt">流行</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2019</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">伍佰 摇滚歌剧《成功之路》</div>
+        <div class="prod-title-en">Wu Bai — Rock Opera: The Road to Success</div>
+        <div class="prod-tags"><span class="pt">摇滚</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">爵仕·李泉 &amp; JZ All Stars 音乐会</div>
+        <div class="prod-title-en">Li Quan &amp; JZ All Stars — Jazz Concert</div>
+        <div class="prod-tags"><span class="pt">爵士</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2020</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">彩虹合唱团 音乐会</div>
+        <div class="prod-title-en">Rainbow Chamber Singers — Concerts</div>
+        <div class="prod-tags"><span class="pt">合唱</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2020–2023</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 4. 交响乐 / 古典音乐会 ORCHESTRAL -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🎻</span>
+      <span class="genre-zh">交响乐 & 古典音乐会 <span class="genre-en">Orchestral & Classical Concerts</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item">
+        <div class="prod-title-zh">马林斯基交响乐团</div>
+        <div class="prod-title-en">Mariinsky Orchestra</div>
+        <div class="prod-tags"><span class="pt">艺术节</span><span class="pt">快闪</span></div>
+        <div class="prod-note">2019 · 四小天鹅参与南京马拉松爆款话题</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/WjcHvqonYUXC6MZALvHlAQ" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">慕尼黑爱乐乐团</div>
+        <div class="prod-title-en">Munich Philharmonic</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">梵志登与纽约爱乐乐团</div>
+        <div class="prod-title-en">van Zweden & New York Philharmonic</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/qCb5f1jYQ-vhEHxo-bmL5g" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">维也纳柏林爱乐音乐家合奏团</div>
+        <div class="prod-title-en">Berlin-Vienna Philharmonic Ensemble</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2023</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">捷克爱乐乐团</div>
+        <div class="prod-title-en">Czech Philharmonic</div>
+        <div class="prod-tags"><span class="pt">酒会</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2019 · 酒会策划执行</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">匈牙利国家爱乐乐团</div>
+        <div class="prod-title-en">Hungarian National Philharmonic</div>
+        <div class="prod-tags"><span class="pt">快闪</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2019 · 夫子庙快闪活动</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">祖宾·梅塔音乐会</div>
+        <div class="prod-title-en">Zubin Mehta Concert</div>
+        <div class="prod-tags"><span class="pt">爆款话题</span></div>
+        <div class="prod-note">2017 · #购票排队盛况# 爆款话题策划</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">古乐团音乐会</div>
+        <div class="prod-title-en">Early Music Ensemble Concert</div>
+        <div class="prod-tags"><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2022 · 巴洛克专场</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/NSu6VB14Nuc5zYBEIklnQQ" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">王中山古筝音乐会</div>
+        <div class="prod-title-en">Wang Zhongshan Guzheng Concert</div>
+        <div class="prod-tags"><span class="pt">民族乐器</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">音乐会《运河·畅想》</div>
+        <div class="prod-title-en">Grand Canal Rhapsody</div>
+        <div class="prod-tags"><span class="pt">大运河主题</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2022</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/WoLk1mZQp9EjNdgRwEr-6Q" target="_blank">查看 →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 5. 歌剧 OPERA -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🎤</span>
+      <span class="genre-zh">歌剧 <span class="genre-en">Opera</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item lead">
+        <span class="prod-star">★ 全案</span>
+        <div class="prod-title-zh">歌剧《拉贝日记》</div>
+        <div class="prod-title-en">The Diaries of John Rabe</div>
+        <div class="prod-tags"><span class="pt lead-tag">全案统筹</span><span class="pt lead-tag">欧洲巡演</span><span class="pt">4K电影</span></div>
+        <div class="prod-note">2019 · 德国·奥地利 · 国家大剧院 · 双语推广</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">京剧《大唐贵妃》</div>
+        <div class="prod-title-en">Tang Imperial Consort</div>
+        <div class="prod-tags"><span class="pt">见面会</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024 · 见面会策划执行</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/1q9TRJljoDDpmKb0Ke8F7A" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">女高音安娜·涅瑞贝科音乐会</div>
+        <div class="prod-title-en">Anna Netrebko</div>
+        <div class="prod-tags"><span class="pt">爆款话题</span></div>
+        <div class="prod-note">#天价门票# 爆款话题策划</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 6. 儿童 / 亲子 CHILDREN'S -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🎠</span>
+      <span class="genre-zh">儿童 & 亲子 <span class="genre-en">Children's & Family</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item lead">
+        <span class="prod-star">★ 全案</span>
+        <div class="prod-title-zh">儿童声乐套曲《因为爸爸》</div>
+        <div class="prod-title-en">Because of Father</div>
+        <div class="prod-tags"><span class="pt lead-tag">全案统筹</span><span class="pt">公益</span><span class="pt">文创</span></div>
+        <div class="prod-note">2021·24 · 联动同名小说 · 黄蓓佳分享会</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/mfwkE0280JC-PGbVw8Vf8w" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">维也纳童声合唱团</div>
+        <div class="prod-title-en">Vienna Boys' Choir</div>
+        <div class="prod-tags"><span class="pt">人物专访</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2023 · 专项采访报道</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/9OtcDTDaA-Xhyt3UJ0RJNg" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">儿童音乐会系列</div>
+        <div class="prod-title-en">Children's Concert Series</div>
+        <div class="prod-tags"><span class="pt">艺术普及</span><span class="pt">系列</span></div>
+        <div class="prod-note">2023</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/Rx4gI-uuCuOpjY9IRtqAcw" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">《海底两万里》</div>
+        <div class="prod-title-en">20,000 Leagues Under the Sea</div>
+        <div class="prod-tags"><span class="pt">亲子</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2025</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">《少年派的奇妙漂流》</div>
+        <div class="prod-title-en">Life of Pi</div>
+        <div class="prod-tags"><span class="pt">亲子</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2025</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">皮影戏《大闹天宫》</div>
+        <div class="prod-title-en">Shadow Puppet: Havoc in Heaven</div>
+        <div class="prod-tags"><span class="pt">传统艺术</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2025</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 7. 传统戏曲 TRADITIONAL THEATRE -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🏮</span>
+      <span class="genre-zh">传统戏曲 <span class="genre-en">Traditional Chinese Theatre</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item">
+        <div class="prod-title-zh">昆曲《牡丹亭》</div>
+        <div class="prod-title-en">The Peony Pavilion · Kunqu Opera</div>
+        <div class="prod-tags"><span class="pt">昆曲</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2021</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/0jcp7WV9lSMpRwQRiyfbmg" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">昆曲《南柯梦》</div>
+        <div class="prod-title-en">The Dream of Nanke · Kunqu</div>
+        <div class="prod-tags"><span class="pt">昆曲</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2025</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">《戏曲》系列演出</div>
+        <div class="prod-title-en">Chinese Opera Series</div>
+        <div class="prod-tags"><span class="pt">周末戏曲日</span><span class="pt">直播</span></div>
+        <div class="prod-note">2020–21 · 「相聚周末戏曲日」系列直播</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">京剧《青衣》</div>
+        <div class="prod-title-en">Qingyi · Beijing Opera</div>
+        <div class="prod-tags"><span class="pt">自制</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2020</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 8. 现代舞 / 实验剧场 CONTEMPORARY DANCE -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🌀</span>
+      <span class="genre-zh">现代舞 & 实验剧场 <span class="genre-en">Contemporary Dance & Experimental Theatre</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item">
+        <div class="prod-title-zh">云门舞集</div>
+        <div class="prod-title-en">Cloud Gate Dance Theatre</div>
+        <div class="prod-tags"><span class="pt">林怀民</span><span class="pt">见面会</span><span class="pt">专访</span></div>
+        <div class="prod-note">2023 · 见面会 + 林怀民深度专访</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/QvEdHpGDjwrYaU_ZEP_BHA" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">陶身体剧场</div>
+        <div class="prod-title-en">TAO Dance Theater</div>
+        <div class="prod-tags"><span class="pt">工作坊</span><span class="pt">演后谈</span></div>
+        <div class="prod-note">2023·25 · 工作坊宣传+演后交流</div>
+        <a class="prod-link" href="https://mp.weixin.qq.com/s/7fH49Yf5XswG2q48tD37Tg" target="_blank">查看 →</a>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">弗拉门戈《生命万岁！》</div>
+        <div class="prod-title-en">¡Viva! Flamenco</div>
+        <div class="prod-tags"><span class="pt">西班牙</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">瑞士罗桑贝嘉芭蕾舞团</div>
+        <div class="prod-title-en">Béjart Ballet Lausanne</div>
+        <div class="prod-tags"><span class="pt">国际芭蕾</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2024</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────── -->
+  <!-- 9. 脱口秀 / 其他 STAND-UP & OTHERS -->
+  <!-- ──────────────────────────────────────── -->
+  <div class="genre-block">
+    <div class="genre-head">
+      <span class="genre-ico">🎙️</span>
+      <span class="genre-zh">脱口秀 & 其他 <span class="genre-en">Stand-up Comedy & Others</span></span>
+      
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-item">
+        <div class="prod-title-zh">《脱口秀和Ta的朋友们》</div>
+        <div class="prod-title-en">Stand-up Comedy Show</div>
+        <div class="prod-tags"><span class="pt">脱口秀</span><span class="pt">宣传对接</span></div>
+        <div class="prod-note">2025</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">《战马》</div>
+        <div class="prod-title-en">War Horse</div>
+        <div class="prod-tags"><span class="pt">后台探班vlog</span><span class="pt">发布会</span></div>
+        <div class="prod-note">2019 · 后台探班vlog · 新闻发布会</div>
+      </div>
+
+      <div class="prod-item">
+        <div class="prod-title-zh">《福尔摩斯谜案》专题</div>
+        <div class="prod-title-en">The Sherlock Holmes Mysteries</div>
+        <div class="prod-tags"><span class="pt">喜马拉雅电台</span><span class="pt">播客策划</span></div>
+        <div class="prod-note">2019 · 喜马拉雅专题策划</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ══════════ ARTIST INTERVIEWS ══════════ -->
+<section id="artists">
+<div class="wrap">
+  <div class="sec-header">
+    <span class="sec-num">05</span>
+    <div class="sec-title">采访艺术家 <span class="en">Artists Interviewed</span></div>
+  </div>
+  <p style="color:var(--muted); margin-bottom:36px; font-size:13.5px;">独立策划并执行的深度艺术家采访，涵盖钢琴、小提琴、舞蹈、话剧、京剧等多个领域。<br><em style="font-style:italic; font-family:'Libre Baskerville',serif; color:#555; font-size:0.9em;">In-depth artist interviews independently planned and conducted, spanning piano, violin, dance, drama, and Peking opera.</em></p>
+
+  <div class="artist-grid">
+
+    <div class="artist-card">
+      <div class="a-ico">🎭</div>
+      <div class="a-zh">林怀民</div>
+      <div class="a-en">Lin Hwai-min</div>
+      <div class="a-role">编舞家 · 云门舞集创始人</div>
+      <div class="a-ctx">深度专访，现代舞创作哲学与云门传承</div>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">🎼</div>
+      <div class="a-zh">李心草</div>
+      <div class="a-en">Li Xincao</div>
+      <div class="a-role">指挥家</div>
+      <div class="a-ctx">指挥艺术与中国交响乐发展深度对话</div>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">🎹</div>
+      <div class="a-zh">王羽佳</div>
+      <div class="a-en">Yuja Wang</div>
+      <div class="a-role">国际钢琴家</div>
+      <div class="a-ctx">深度专访，演奏哲学与艺术人生</div>
+      <a class="a-link" href="https://mp.weixin.qq.com/s/ndwf-vdrXQb-EoVoON1BaQ" target="_blank">阅读全文 →</a>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">🎻</div>
+      <div class="a-zh">宁峰</div>
+      <div class="a-en">Ning Feng</div>
+      <div class="a-role">国际小提琴家</div>
+      <div class="a-ctx">艺术创作背后的故事与专业精神</div>
+      <a class="a-link" href="https://mp.weixin.qq.com/s/BtKOefxV8TyHgjIX9cNAMg" target="_blank">阅读全文 →</a>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">🎹</div>
+      <div class="a-zh">郎朗</div>
+      <div class="a-en">Lang Lang</div>
+      <div class="a-role">国际钢琴家</div>
+      <div class="a-ctx">人物专栏深度采访</div>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">💃</div>
+      <div class="a-zh">金星</div>
+      <div class="a-en">Jin Xing</div>
+      <div class="a-role">舞蹈家 · 演员</div>
+      <div class="a-ctx">就话剧《日出》进行深度专访</div>
+      <a class="a-link" href="https://mp.weixin.qq.com/s/g2pEJTEp1PJOV5_oJAkQqw" target="_blank">阅读全文 →</a>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">🎭</div>
+      <div class="a-zh">史依弘</div>
+      <div class="a-en">Shi Yihong</div>
+      <div class="a-role">京剧名家</div>
+      <div class="a-ctx">京剧艺术传承深度对话</div>
+      <a class="a-link" href="https://mp.weixin.qq.com/s/JYLTc9_1pB4pZteyN6M-EQ" target="_blank">阅读全文 →</a>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">🎪</div>
+      <div class="a-zh">濮存昕</div>
+      <div class="a-en">Pu Cunxin</div>
+      <div class="a-role">话剧表演艺术家</div>
+      <div class="a-ctx">话剧大师的艺术人生与创作理念</div>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">🎤</div>
+      <div class="a-zh">维也纳童声合唱团</div>
+      <div class="a-en">Vienna Boys' Choir</div>
+      <div class="a-role">国际合唱团</div>
+      <div class="a-ctx">赴华演出采访</div>
+      <a class="a-link" href="https://mp.weixin.qq.com/s/9OtcDTDaA-Xhyt3UJ0RJNg" target="_blank">查看报道 →</a>
+    </div>
+
+    <div class="artist-card">
+      <div class="a-ico">🎭</div>
+      <div class="a-zh">辛芷蕾</div>
+      <div class="a-en">Xin Zhilei</div>
+      <div class="a-role">演员</div>
+      <div class="a-ctx">话剧《初步举证》人物专访</div>
+      <a class="a-link" href="https://mp.weixin.qq.com/s/Lc75Kyd0Vo5m1LzPvvFcwQ" target="_blank">阅读全文 →</a>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ══════════ AWARDS ══════════ -->
+<section id="awards">
+<div class="wrap">
+  <div class="sec-header">
+    <span class="sec-num">06</span>
+    <div class="sec-title">荣誉与认证 <span class="en">Awards & Credentials</span></div>
+  </div>
+
+  <!-- Data strip -->
+  <div class="data-strip">
+    <div class="data-strip-title">核心数据成就 · Key Performance Data</div>
+    <div class="data-row">
+      <div class="data-cell">
+        <span class="data-n">1M+</span>
+        <div class="data-l">江苏大剧院全平台粉丝<span class="en-l">JCPA total followers<br>(WeChat 670K · Weibo 104K · 小红书 60K · Douyin 75K)</span></div>
+      </div>
+      <div class="data-cell">
+        <span class="data-n">2.4B</span>
+        <div class="data-l">《红楼梦》话题全网曝光<span class="en-l">Dream of the Red Mansion campaign impressions</span></div>
+      </div>
+      <div class="data-cell">
+        <span class="data-n">860+</span>
+        <div class="data-l">年均有效媒体报道篇数<span class="en-l">Earned media articles per year</span></div>
+      </div>
+      <div class="data-cell">
+        <span class="data-n">9.6M</span>
+        <div class="data-l">年度直播总观看量<span class="en-l">Annual live-stream total views</span></div>
+      </div>
+      <div class="data-cell">
+        <span class="data-n">1000+</span>
+        <div class="data-l">年均原创发文数量<span class="en-l">Original posts published per year</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="awards-grid">
+
+    <div class="award-card">
+      <div class="aw-year">2021 · 全国荣誉</div>
+      <div class="aw-title-zh">全国"三八红旗手"荣誉称号（集体）</div>
+      <div class="aw-title-en">National March 8th Red-Banner Pacesetter — Collective Honour</div>
+      <div class="aw-desc">以集体荣誉形式获得国家级职业贡献表彰，代表在文化艺术行业的突出专业贡献与团队引领力。<br><em style="font-style:italic; font-family:'Libre Baskerville',serif; color:#555">Collective national recognition for professional contribution and leadership in the cultural sector.</em></div>
+    </div>
+
+    <div class="award-card">
+      <div class="aw-year">2019 · 2020 · 2021 · 2022 · 2024</div>
+      <div class="aw-title-zh">年度先进工作者</div>
+      <div class="aw-title-en">Advanced Employee of the Year — Jiangsu Center for the Performing Arts</div>
+      <div class="aw-desc">连续五届荣获江苏大剧院年度先进工作者称号。<br><em style="font-style:italic; font-family:'Libre Baskerville',serif; color:#555">Recognised as top-performing employee for five separate years at Jiangsu Center for the Performing Arts.</em></div>
+    </div>
+
+    <div class="award-card">
+      <div class="aw-year">江苏文投集团 · 创新奖</div>
+      <div class="aw-title-zh">跨界合作创新奖</div>
+      <div class="aw-title-en">Innovation Award — Cross-sector Partnership</div>
+      <div class="aw-desc">因策划《红楼梦》× 茶颜悦色跨界合作项目，获江苏文化投资管理集团创新奖表彰。<br><em style="font-style:italic; font-family:'Libre Baskerville',serif; color:#555">Awarded for the A Dream of Red Mansions × Chayanyuese collaboration by Jiangsu Cultural Investment & Management Group.</em></div>
+    </div>
+
+    <div class="award-card">
+      <div class="aw-year">资质认证 · Qualifications</div>
+      <div class="aw-title-zh">演出经纪人资格证 · 展览策划师证书</div>
+      <div class="aw-title-en">Performance Agent Certificate · Exhibition Planner Certificate</div>
+      <div class="aw-desc">演出经纪人资格证书——中华人民共和国文化和旅游部颁发。<br><em style="font-style:italic; font-family:'Libre Baskerville',serif; color:#555">Performance Agent Qualification — Ministry of Culture and Tourism, PRC. Exhibition Planner Certificate.</em></div>
+    </div>
+
+    <div class="award-card">
+      <div class="aw-year">2024 · 戏剧创作</div>
+      <div class="aw-title-zh">原创剧本《永生潮湿》投递乌镇戏剧节</div>
+      <div class="aw-title-en">Original Screenplay: Eternal Dampness</div>
+      <div class="aw-desc">原创剧本《永生潮湿》投递「2024乌镇戏剧节青年竞演单元」，体现个人戏剧文学创作能力。<br><em style="font-style:italic; font-family:'Libre Baskerville',serif; color:#555">Original screenplay submitted to the 2024 Wuzhen Theatre Festival Youth Competition Unit, demonstrating independent dramatic writing capability.</em></div>
+    </div>
+
+    <div class="award-card">
+      <div class="aw-year">2013–2017 · 教育荣誉</div>
+      <div class="aw-title-zh">西安外国语大学 · 二等、三等奖学金</div>
+      <div class="aw-title-en">Xi'an International Studies University · Scholarships</div>
+      <div class="aw-desc">本科GPA 87/100，专业排名前5%；2014–2015年二等奖学金；2013–2014年三等奖学金。<br><em style="font-style:italic; font-family:'Libre Baskerville',serif; color:#555">GPA 87/100 · Top 5% of cohort · Second-class Scholarship 2014–15 · Third-class Scholarship 2013–14.</em></div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="ft-name">王乐爽 · Lottie Wang</div>
+  <div class="ft-sub">演出营销 · 内容策划 · 活动执行 · Performing Arts Marketing · Content Strategy · Campaign Execution</div>
+  <div class="ft-copy">Portfolio 2016 – 2025 · carlotahascats@gmail.com</div>
